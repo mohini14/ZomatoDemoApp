@@ -14,7 +14,10 @@
 @interface ViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (strong,nonatomic) NSArray *collections;
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong,nonatomic) CollectionViewCell *Collectioncell;
+
+-(void)labelTapped;
 
 @end
 
