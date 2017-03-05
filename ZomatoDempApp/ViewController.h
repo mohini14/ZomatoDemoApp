@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CollectionViewCell.h"
+#import "parser.h"
+#import "AlertDisplay.h"
 
 @interface ViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 

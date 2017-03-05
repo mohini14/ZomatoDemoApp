@@ -17,6 +17,10 @@
 		159A22831E6C0429004DC61B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A22811E6C0429004DC61B /* CollectionViewCell.m */; };
 		159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159A22821E6C0429004DC61B /* CollectionViewCell.xib */; };
 		159A22861E6C07AC004DC61B /* Monkey_Munch_food_card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 159A22851E6C07AC004DC61B /* Monkey_Munch_food_card.jpg */; };
+		159A22941E6C245B004DC61B /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A22931E6C245B004DC61B /* Services.m */; };
+		159A229C1E6C2A23004DC61B /* parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A229B1E6C2A23004DC61B /* parser.m */; };
+		159A22A01E6C2B5F004DC61B /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A229F1E6C2B5F004DC61B /* Category.m */; };
+		159A22A31E6C3C35004DC61B /* AlertDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A22A21E6C3C35004DC61B /* AlertDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,15 @@
 		159A22811E6C0429004DC61B /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		159A22821E6C0429004DC61B /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		159A22851E6C07AC004DC61B /* Monkey_Munch_food_card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monkey_Munch_food_card.jpg; sourceTree = "<group>"; };
+		159A22921E6C245B004DC61B /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
+		159A22931E6C245B004DC61B /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
+		159A22961E6C267D004DC61B /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		159A229A1E6C2A23004DC61B /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		159A229B1E6C2A23004DC61B /* parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parser.m; sourceTree = "<group>"; };
+		159A229E1E6C2B5F004DC61B /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		159A229F1E6C2B5F004DC61B /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		159A22A11E6C3C35004DC61B /* AlertDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertDisplay.h; sourceTree = "<group>"; };
+		159A22A21E6C3C35004DC61B /* AlertDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,8 @@
 		159A225A1E6C01FF004DC61B /* ZomatoDempApp */ = {
 			isa = PBXGroup;
 			children = (
+				159A22951E6C2664004DC61B /* Utility */,
+				159A22901E6C2428004DC61B /* Data Mnager */,
 				159A22871E6C0E75004DC61B /* Classes */,
 			);
 			path = ZomatoDempApp;
@@ -193,6 +208,53 @@
 				159A22821E6C0429004DC61B /* CollectionViewCell.xib */,
 			);
 			name = "XIB Files";
+			sourceTree = "<group>";
+		};
+		159A22901E6C2428004DC61B /* Data Mnager */ = {
+			isa = PBXGroup;
+			children = (
+				159A229D1E6C2B48004DC61B /* Data Model */,
+				159A22991E6C29F6004DC61B /* Data Parser */,
+				159A22911E6C2438004DC61B /* Services */,
+			);
+			name = "Data Mnager";
+			sourceTree = "<group>";
+		};
+		159A22911E6C2438004DC61B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				159A22921E6C245B004DC61B /* Services.h */,
+				159A22931E6C245B004DC61B /* Services.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		159A22951E6C2664004DC61B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				159A22961E6C267D004DC61B /* Define.h */,
+				159A22A11E6C3C35004DC61B /* AlertDisplay.h */,
+				159A22A21E6C3C35004DC61B /* AlertDisplay.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		159A22991E6C29F6004DC61B /* Data Parser */ = {
+			isa = PBXGroup;
+			children = (
+				159A229A1E6C2A23004DC61B /* parser.h */,
+				159A229B1E6C2A23004DC61B /* parser.m */,
+			);
+			name = "Data Parser";
+			sourceTree = "<group>";
+		};
+		159A229D1E6C2B48004DC61B /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				159A229E1E6C2B5F004DC61B /* Category.h */,
+				159A229F1E6C2B5F004DC61B /* Category.m */,
+			);
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				159A22631E6C01FF004DC61B /* ViewController.m in Sources */,
+				159A229C1E6C2A23004DC61B /* parser.m in Sources */,
+				159A22A31E6C3C35004DC61B /* AlertDisplay.m in Sources */,
 				159A22601E6C01FF004DC61B /* AppDelegate.m in Sources */,
+				159A22A01E6C2B5F004DC61B /* Category.m in Sources */,
+				159A22941E6C245B004DC61B /* Services.m in Sources */,
 				159A22831E6C0429004DC61B /* CollectionViewCell.m in Sources */,
 				159A225D1E6C01FF004DC61B /* main.m in Sources */,
 			);

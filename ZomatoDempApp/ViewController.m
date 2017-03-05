@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Category.h"
 
 @interface ViewController ()
 
@@ -15,12 +16,10 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.collections=@[];
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.collectionView.delegate=self;
-    self.collectionView.dataSource=self;
-    self.collections=@[[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"],[UIImage imageNamed:@"Monkey_Munch_food_card.jpg"]];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Cell"];
+    [self setUpVC];
 }
 
 
@@ -29,7 +28,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setUpVC{
 
+    self.collectionView.delegate=self;
+    self.collectionView.dataSource=self;
+    [parser getCategories:^(NSArray *categories, NSString *errorMsg)
+    {
+        if(errorMsg!=nil)
+        {
+            [AlertDisplay showAlertPopupWithTitle:errorMsg forView:self];
+            
+        }
+        else
+        {
+            [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Cell"];
+            self.collections=categories;
+            [self.collectionView reloadData];
+            
+        }
+    }];
+    
+}
 #pragma mark-COLLECTION VIEW DELEGATES
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -42,7 +61,8 @@
 
 -(UICollectionViewCell *) collectionView :(UICollectionView *) collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
     CollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.cellImage.image=_collections[indexPath.row];
+    Category *cat = self.collections[indexPath.row];
+    cell.nameLable.text=cat.name;
     return cell;
     
 }
