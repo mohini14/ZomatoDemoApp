@@ -32,10 +32,10 @@
 }
 
 -(void)setUpVC{
-
+	[self.searchBar setHidden:YES];
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
-    [parser getCategories:^(NSArray *categories, NSString *errorMsg)
+    [DataParser getCategories:^(NSArray *categories, NSString *errorMsg)
     {
         if(errorMsg!=nil)
         {
@@ -47,20 +47,8 @@
             [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Cell"];
             self.collections=categories;
             [self.collectionView reloadData];
-            UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTapped)];
-            tapGestureRecognizer.numberOfTapsRequired = 1;
-            [self.Collectioncell.nameLable addGestureRecognizer:tapGestureRecognizer];
-            self.Collectioncell.nameLable.userInteractionEnabled = YES;
-        }
-    }];
-    
-}
-
-
--(void)labelTapped {
-    NSString *clickedItemStr=[NSString stringWithFormat:@"%ld",(long)clickedItem];
-    [AlertDisplay showAlertPopupWithTitle:clickedItemStr forView:self];
-    
+		}
+	}];
 }
 
 
@@ -94,4 +82,27 @@
     clickedItem=indexPath.row;
 }
 
+#pragma mark- VC IBActions methods
+- (IBAction)searchButtonPressed:(UIBarButtonItem *)sender {
+	[self.searchBar setHidden:NO];
+	self.serchBarButton.tintColor = [UIColor clearColor];
+	self.serchBarButton.enabled = NO;
+	NSString *citySearch=self.searchBar.text;
+//	[DataParser getDetailsAboutCity:citySearch withCompletionHandler:^(NSArray *cityDetails, NSString *errorMsg) {
+//		SessionData *sessionData=[SessionData getInstance];
+//		sessionData.currentCityDetails=cityDetails;
+		
+		
+		
+		
+	}];
+	
+	
+
+	
+	
+		
+	
+	
+}
 @end

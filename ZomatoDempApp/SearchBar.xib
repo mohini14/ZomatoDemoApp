@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hvr-0z-Rq4" customClass="SearchBar">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OMp-d9-vlg">
+                    <rect key="frame" x="0.0" y="3" width="150" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OMp-d9-vlg" secondAttribute="bottom" constant="3" id="9mb-mP-vn2"/>
+                <constraint firstItem="OMp-d9-vlg" firstAttribute="top" secondItem="hvr-0z-Rq4" secondAttribute="top" constant="3" id="D9C-KR-aI6"/>
+                <constraint firstItem="OMp-d9-vlg" firstAttribute="leading" secondItem="hvr-0z-Rq4" secondAttribute="leading" id="iVt-fR-HCH"/>
+                <constraint firstAttribute="trailing" secondItem="OMp-d9-vlg" secondAttribute="trailing" id="kuh-x3-LLE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchBar" destination="OMp-d9-vlg" id="sbv-FU-h2i"/>
+            </connections>
+            <point key="canvasLocation" x="60" y="93"/>
+        </view>
+    </objects>
+</document>
