@@ -32,11 +32,29 @@
 
 -(void) setUpVC
 {
-   [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+	[self setNavigationBarItems];
+}
+
+
+-(void) setNavigationBarItems{
 	
+	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+	UIBarButtonItem *selectedLocation=[[UIBarButtonItem alloc] initWithTitle:@"SelectedLocation" style:UIBarButtonItemStylePlain target:self action:@selector(selectedLocationAction:)];
+	selectedLocation.tintColor=[UIColor whiteColor];
+	self.navigationItem.leftBarButtonItem=selectedLocation;
 	
 
 }
+
+-(void)selectedLocationAction:(id)sender
+{
+	NSLog(@"share action");
+}
+
+
+
+
+
 
 
 @end
