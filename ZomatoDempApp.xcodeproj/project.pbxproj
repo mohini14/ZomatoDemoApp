@@ -31,7 +31,6 @@
 		15DB8A661E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15DB8A631E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png */; };
 		15DB8A671E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15DB8A641E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png */; };
 		15DB8A681E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15DB8A651E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png */; };
-		15DB8A6A1E6E8CED00339BAA /* HOMEVISIT-Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 15DB8A691E6E8CED00339BAA /* HOMEVISIT-Grey.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,6 @@
 		15DB8A631E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-02-28 at 1.11.51 PM.png"; path = "../../../../Downloads/Screen Shot 2017-02-28 at 1.11.51 PM.png"; sourceTree = "<group>"; };
 		15DB8A641E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-02-28 at 1.12.22 PM.png"; path = "../../../../Downloads/Screen Shot 2017-02-28 at 1.12.22 PM.png"; sourceTree = "<group>"; };
 		15DB8A651E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-02-28 at 1.12.45 PM.png"; path = "../../../../Downloads/Screen Shot 2017-02-28 at 1.12.45 PM.png"; sourceTree = "<group>"; };
-		15DB8A691E6E8CED00339BAA /* HOMEVISIT-Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HOMEVISIT-Grey.png"; path = "../../../../Downloads/HOMEVISIT-Grey.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,7 +299,6 @@
 		15DB8A621E6E81E700339BAA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				15DB8A691E6E8CED00339BAA /* HOMEVISIT-Grey.png */,
 				15DB8A631E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png */,
 				15DB8A641E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png */,
 				15DB8A651E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png */,
@@ -398,7 +395,6 @@
 				159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */,
 				159A22661E6C01FF004DC61B /* Main.storyboard in Resources */,
 				155B91891E6DEC00005CC114 /* CustomiseLabel.xib in Resources */,
-				15DB8A6A1E6E8CED00339BAA /* HOMEVISIT-Grey.png in Resources */,
 				15DB8A681E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */,
 				15DB8A671E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png in Resources */,
 			);

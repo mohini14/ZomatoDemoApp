@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomizeLabel.h"
+
 
 @interface HomeViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
 
 
 @end
