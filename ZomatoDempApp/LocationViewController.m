@@ -32,10 +32,9 @@
 #pragma  mark -Set Up Initial VC
 -(void) setUpVC
 {
-	self.searchedResultsTableHieght.constant=0;
 	self.searchedResultsTable.delegate=self;
 	self.searchedResultsTable.dataSource=self;
-	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 	[[self.detectMyLocationButton layer] setBorderWidth:2.0f];
 	[[self.detectMyLocationButton layer] setBorderColor:[UIColor greenColor].CGColor];
 }
@@ -99,21 +98,27 @@
 
 }
 
-- (IBAction)detectMyLocationButtonPressed:(UIButton *)sender {
-	
-	[[LocationManager getInstance]getLocation:^(double latitude, double longitude, NSError *error)
-	{
-		if(error==nil)
-		{
-		lat=latitude;
-		lon=longitude;
-			
-		}
-		else
-		{
-			[AlertDisplay showAlertPopupWithTitle:@"Error in Fetching Your Location" forView:self];
-		}
-	}];
-	
+- (IBAction)detectMyLocationButtonPressed:(id)sender {
+    [[LocationManager getInstance]getLocation:^(double latitude, double longitude, NSError *error)
+     {
+         NSLog(@"%f,%f",longitude,longitude);
+         if(error==nil)
+         {
+             lat=latitude;
+             lon=longitude;
+             [DataParser getLocation:lat withLongitude:lon withCompletionHandler:^(CityDetails *city, NSString *errorMsg)
+             {
+                 [AlertDisplay showAlertPopupWithTitle:city.name forView:self];
+             }];
+             
+         }
+         else
+         {
+             [AlertDisplay showAlertPopupWithTitle:@"Error in Fetching Your Location" forView:self];
+         }
+     }];
+
 }
+
+
 @end

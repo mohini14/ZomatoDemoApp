@@ -15,15 +15,15 @@
 #import "LocationManager.h"
 
 @interface LocationViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UISearchBar *locationSearchBar;
 @property (weak, nonatomic) IBOutlet UIButton *detectMyLocationButton;
 @property (weak, nonatomic) IBOutlet UITableView *searchedResultsTable;
-
 @property (weak, nonatomic) IBOutlet UITableView *recentlySearchedPlacesTable;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchedResultsTableHieght;
 
 
 - (IBAction)searchButton:(id)sender;
-- (IBAction)detectMyLocationButtonPressed:(UIButton *)sender;
+- (IBAction)detectMyLocationButtonPressed:(id)sender;
 
 @end

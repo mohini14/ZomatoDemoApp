@@ -36,40 +36,47 @@
 
 
 
-//+(NSURL *) composeURLWithParametersForLOCATION :(NSString *)citySearch {
-//		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-//		NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
-//		components.queryItems=@[city];
-//		NSURL *url=components.URL;
-//		return url;
-//	
-//	
-//}
-//
-//
-//
-//+(void) getLocation :(NSString *)citySearch withCompletionHandler :(void (^)(Location *loc))callBackToMainVC{
-//	NSURL *url=[DataParser composeURLWithParametersForLOCATION :(NSString *)citySearch];
-//	__block NSURLRequest *request;
-//		NSString *urlString=url.absoluteString;
-//		[Services makeRequestWithParametres:urlString withService:@"locations" withCompletionHandler:^(NSURLRequest *recievedRequest)
-//		 {
-//			request=recievedRequest;
-//			[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-//		   {
-//			 //NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
-//			 if(errorMsg==nil)
-//			 {
-//				 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
-//			 }
-//			 callBackToMainVC(array,errorMsg);
-//		 }];
-//		}];
-//
-//	
-//	
-//}
-//
++(NSURL *) composeURLWithParametersForLOCATION :(double)lat withLongitude :(double)lon {
+		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
+        NSString *latitude=[NSString stringWithFormat:@"%.20f", lat];
+        NSString *longitude=[NSString stringWithFormat:@"%.20f", lon];
+        NSURLQueryItem *latd=[NSURLQueryItem queryItemWithName:@"lat" value:latitude];
+        NSURLQueryItem *lond=[NSURLQueryItem queryItemWithName:@"lon" value:longitude];
+		components.queryItems=@[latd,lond];
+		NSURL *url=components.URL;
+		return url;
+	
+	
+}
+
+
+
++(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC{
+    NSURL *url=[DataParser composeURLWithParametersForLOCATION :lat withLongitude :(double) lon];
+	__block NSURLRequest *request;
+		NSString *urlString=url.absoluteString;
+		[Services makeRequestWithParametres:urlString withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
+		 {
+			request=recievedRequest;
+             __block CityDetails *currentCity;
+			[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
+		   {
+			// NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
+			 if(errorMsg==nil)
+			 {
+				 NSArray *array= data[@"location_suggestions"];
+                 CityDetails *city=[[CityDetails alloc]initWithDictionary:array[0]];
+                 currentCity=city;
+			 }
+               
+			 callBackToMainVC(currentCity,errorMsg);
+		 }];
+		}];
+
+	
+	
+}
+
 
 
 +(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC

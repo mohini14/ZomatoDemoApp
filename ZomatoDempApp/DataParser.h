@@ -16,8 +16,6 @@
 @interface DataParser : NSObject
 
 +(void) getCategories :(void (^)(NSArray *categories,NSString * errorMsg))callBackToMainVC;
-//+(NSURL *) composeURLWithParametersForLOCATION :(NSString *)citySearch;
 +(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC;
-//+(void) getLocation :(NSString *)citySearch withCompletionHandler :(void (^)(Location *loc))callBackToMainVC;
-
++(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC;
 @end

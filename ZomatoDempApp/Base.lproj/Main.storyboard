@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A0N-zJ-n7H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A0N-zJ-n7H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -336,8 +336,7 @@
                                 <color key="tintColor" red="0.09493174456136852" green="0.41900097150259064" blue="0.17889623187122156" alpha="0.88801166369999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Detect My Location"/>
                                 <connections>
-                                    <action selector="detectMyLocationButtonPressed:" destination="X0e-UP-f3A" eventType="touchUpInside" id="loh-rS-C9Z"/>
-                                    <action selector="searchButton:" destination="X0e-UP-f3A" eventType="touchUpInside" id="J7v-od-bJb"/>
+                                    <action selector="detectMyLocationButtonPressed:" destination="X0e-UP-f3A" eventType="touchUpInside" id="mB9-gy-jKl"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="Start Typing a Location..." translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-yH-ayd">
@@ -360,7 +359,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENTLY SEARCHED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za5-Fe-B1D">
-                                <rect key="frame" x="16" y="430" width="200" height="20"/>
+                                <rect key="frame" x="16" y="386" width="200" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Qmq-u1-jiC"/>
                                     <constraint firstAttribute="height" constant="20" id="h7a-hF-NnH"/>
@@ -381,7 +380,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EqA-Ib-Y19">
-                                <rect key="frame" x="16" y="450" width="343" height="200"/>
+                                <rect key="frame" x="16" y="406" width="343" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="wj9-iD-PDD"/>
@@ -407,6 +406,9 @@
                             <constraint firstItem="66O-qF-yfT" firstAttribute="top" secondItem="5Fq-Zf-4Um" secondAttribute="bottom" constant="10" id="zrU-Sz-uzb"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rfK-7s-aEM"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="dGo-fg-F0b">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fyQ-kP-5iB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -414,15 +416,15 @@
                                 <segue destination="AU4-52-bnz" kind="unwind" unwindAction="unwindfromLocationVC:" id="New-ue-VZM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="eNn-tT-mEb">
+                        <barButtonItem key="rightBarButtonItem" title="Select Location" id="eNn-tT-mEb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="650"/>
                     <connections>
-                        <outlet property="detectMyLocationButton" destination="5Fq-Zf-4Um" id="oeE-Fv-KL5"/>
-                        <outlet property="detectMyLocationButtonPressed" destination="5Fq-Zf-4Um" id="ZBm-ik-eyS"/>
+                        <outlet property="detectMyLocationButton" destination="5Fq-Zf-4Um" id="PTA-8L-wew"/>
                         <outlet property="locationSearchBar" destination="8Y6-yH-ayd" id="0Tu-Fk-Roq"/>
                         <outlet property="searchedResultsTable" destination="Aml-Lb-ufH" id="cbs-3k-sds"/>
                         <outlet property="searchedResultsTableHieght" destination="zDX-aa-84b" id="Iwf-12-2qA"/>
