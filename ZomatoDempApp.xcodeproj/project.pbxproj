@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1528E1201E6D396700042D16 /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1528E11F1E6D396700042D16 /* SearchBar.m */; };
-		1528E1221E6D399400042D16 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528E1211E6D399400042D16 /* SearchBar.xib */; };
 		1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D11E6D5402000C2A44 /* CityDetails.m */; };
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
 		155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B91861E6DBF8C005CC114 /* HomeViewController.m */; };
-		155B91891E6DEC00005CC114 /* CustomiseLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155B91881E6DEC00005CC114 /* CustomiseLabel.xib */; };
 		155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B918B1E6DED56005CC114 /* CustomizeLabel.m */; };
+		15669BD41E6EC0380016EBA4 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BD31E6EC0380016EBA4 /* LocationViewController.m */; };
+		15669BD61E6EC1B30016EBA4 /* cancelImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 15669BD51E6EC1B30016EBA4 /* cancelImage.jpeg */; };
+		15669BDA1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */; };
+		15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */; };
+		15669BDE1E6EE7750016EBA4 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BDD1E6EE7750016EBA4 /* LocationManager.m */; };
 		159A225D1E6C01FF004DC61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A225C1E6C01FF004DC61B /* main.m */; };
 		159A22601E6C01FF004DC61B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A225F1E6C01FF004DC61B /* AppDelegate.m */; };
-		159A22631E6C01FF004DC61B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A22621E6C01FF004DC61B /* ViewController.m */; };
 		159A22661E6C01FF004DC61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159A22641E6C01FF004DC61B /* Main.storyboard */; };
 		159A22681E6C01FF004DC61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 159A22671E6C01FF004DC61B /* Assets.xcassets */; };
 		159A226B1E6C01FF004DC61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159A22691E6C01FF004DC61B /* LaunchScreen.storyboard */; };
@@ -46,7 +48,6 @@
 /* Begin PBXFileReference section */
 		1528E11E1E6D396700042D16 /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
 		1528E11F1E6D396700042D16 /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
-		1528E1211E6D399400042D16 /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
 		1541B3D01E6D5402000C2A44 /* CityDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetails.h; sourceTree = "<group>"; };
 		1541B3D11E6D5402000C2A44 /* CityDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetails.m; sourceTree = "<group>"; };
 		1541B3D41E6D71F0000C2A44 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
@@ -55,15 +56,20 @@
 		1541B3DD1E6D8231000C2A44 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		155B91851E6DBF8C005CC114 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		155B91861E6DBF8C005CC114 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		155B91881E6DEC00005CC114 /* CustomiseLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomiseLabel.xib; sourceTree = "<group>"; };
 		155B918A1E6DED56005CC114 /* CustomizeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeLabel.h; sourceTree = "<group>"; };
 		155B918B1E6DED56005CC114 /* CustomizeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeLabel.m; sourceTree = "<group>"; };
+		15669BD21E6EC0380016EBA4 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		15669BD31E6EC0380016EBA4 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		15669BD51E6EC1B30016EBA4 /* cancelImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cancelImage.jpeg; path = ../../../../Downloads/cancelImage.jpeg; sourceTree = "<group>"; };
+		15669BD71E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchedResultsCVCellTableViewCell.h; sourceTree = "<group>"; };
+		15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchedResultsCVCellTableViewCell.m; sourceTree = "<group>"; };
+		15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchedResultsCVCellTableViewCell.xib; sourceTree = "<group>"; };
+		15669BDC1E6EE7750016EBA4 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		15669BDD1E6EE7750016EBA4 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		159A22581E6C01FF004DC61B /* ZomatoDempApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoDempApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A225C1E6C01FF004DC61B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		159A225E1E6C01FF004DC61B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		159A225F1E6C01FF004DC61B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		159A22611E6C01FF004DC61B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		159A22621E6C01FF004DC61B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		159A22651E6C01FF004DC61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		159A22671E6C01FF004DC61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		159A226A1E6C01FF004DC61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -183,10 +189,10 @@
 		159A22891E6C0E97004DC61B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				159A22611E6C01FF004DC61B /* ViewController.h */,
-				159A22621E6C01FF004DC61B /* ViewController.m */,
 				155B91851E6DBF8C005CC114 /* HomeViewController.h */,
 				155B91861E6DBF8C005CC114 /* HomeViewController.m */,
+				15669BD21E6EC0380016EBA4 /* LocationViewController.h */,
+				15669BD31E6EC0380016EBA4 /* LocationViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 			children = (
 				1528E11E1E6D396700042D16 /* SearchBar.h */,
 				1528E11F1E6D396700042D16 /* SearchBar.m */,
+				15669BD71E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.h */,
+				15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */,
 				159A22801E6C0429004DC61B /* CollectionViewCell.h */,
 				159A22811E6C0429004DC61B /* CollectionViewCell.m */,
 				155B918A1E6DED56005CC114 /* CustomizeLabel.h */,
@@ -237,9 +245,8 @@
 		159A228F1E6C0F55004DC61B /* XIB Files */ = {
 			isa = PBXGroup;
 			children = (
+				15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */,
 				159A22821E6C0429004DC61B /* CollectionViewCell.xib */,
-				1528E1211E6D399400042D16 /* SearchBar.xib */,
-				155B91881E6DEC00005CC114 /* CustomiseLabel.xib */,
 			);
 			name = "XIB Files";
 			sourceTree = "<group>";
@@ -270,6 +277,8 @@
 				159A22961E6C267D004DC61B /* Define.h */,
 				159A22A11E6C3C35004DC61B /* AlertDisplay.h */,
 				159A22A21E6C3C35004DC61B /* AlertDisplay.m */,
+				15669BDC1E6EE7750016EBA4 /* LocationManager.h */,
+				15669BDD1E6EE7750016EBA4 /* LocationManager.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 		15DB8A621E6E81E700339BAA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				15669BD51E6EC1B30016EBA4 /* cancelImage.jpeg */,
 				15DB8A631E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png */,
 				15DB8A641E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png */,
 				15DB8A651E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png */,
@@ -388,13 +398,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1528E1221E6D399400042D16 /* SearchBar.xib in Resources */,
 				15DB8A661E6E820700339BAA /* Screen Shot 2017-02-28 at 1.11.51 PM.png in Resources */,
 				159A226B1E6C01FF004DC61B /* LaunchScreen.storyboard in Resources */,
 				159A22681E6C01FF004DC61B /* Assets.xcassets in Resources */,
 				159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */,
+				15669BD61E6EC1B30016EBA4 /* cancelImage.jpeg in Resources */,
 				159A22661E6C01FF004DC61B /* Main.storyboard in Resources */,
-				155B91891E6DEC00005CC114 /* CustomiseLabel.xib in Resources */,
+				15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */,
 				15DB8A681E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */,
 				15DB8A671E6E820700339BAA /* Screen Shot 2017-02-28 at 1.12.22 PM.png in Resources */,
 			);
@@ -414,7 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				159A22631E6C01FF004DC61B /* ViewController.m in Sources */,
+				15669BDE1E6EE7750016EBA4 /* LocationManager.m in Sources */,
 				159A229C1E6C2A23004DC61B /* DataParser.m in Sources */,
 				159A22A31E6C3C35004DC61B /* AlertDisplay.m in Sources */,
 				159A22601E6C01FF004DC61B /* AppDelegate.m in Sources */,
@@ -422,8 +432,10 @@
 				1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */,
 				159A22941E6C245B004DC61B /* Services.m in Sources */,
 				1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */,
+				15669BDA1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m in Sources */,
 				159A22831E6C0429004DC61B /* CollectionViewCell.m in Sources */,
 				159A225D1E6C01FF004DC61B /* main.m in Sources */,
+				15669BD41E6EC0380016EBA4 /* LocationViewController.m in Sources */,
 				1541B3DE1E6D8231000C2A44 /* Location.m in Sources */,
 				1528E1201E6D396700042D16 /* SearchBar.m in Sources */,
 				155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */,

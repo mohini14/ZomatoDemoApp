@@ -72,44 +72,45 @@
 //
 
 
-//+(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
-//{
-//	__block NSURLRequest *request;
-//	NSURL *url=[DataParser composeURLWithParameters:citySearch withParameter2:5];
-//	NSString *urlString=url.absoluteString;
-//	[Services makeRequestWithParametres:urlString withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
-//	 {
-//		request=recievedRequest;
-//		[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-//	   {
-//		 NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
-//		 if(errorMsg==nil)
-//		 {
-//			 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
-//			for(NSDictionary *obj in array)
-//			{
-//				CityDetails *cityDetail=[[CityDetails alloc]initWithDictionary:obj];
-//				[cityDetails addObject:cityDetail];
-//				
-//			}
-//			 
-//		 }
-//		 callBackToMainVC(cityDetails,errorMsg);
-//	 }];
-//	}];
-//}
++(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
+{
+	__block NSURLRequest *request;
+	//NSURL *url=[DataParser composeURLWithParameters:citySearch withParameter2:5];
+	//NSString *urlString=url.absoluteString;
+	[Services makeRequestWithParametres:@"https://developers.zomato.com/api/v2.1/<service>?q=delhi&count=10"
+							withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
+	 {
+		request=recievedRequest;
+		[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
+	   {
+		 NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
+		 if(errorMsg==nil)
+		 {
+			 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
+			for(NSDictionary *obj in array)
+			{
+				CityDetails *cityDetail=[[CityDetails alloc]initWithDictionary:obj];
+				[cityDetails addObject:cityDetail];
+				
+			}
+			 
+		 }
+		 callBackToMainVC(cityDetails,errorMsg);
+	 }];
+	}];
+}
 
 
-//#pragma mark-Making URL along with Parameters
-//+(NSURL *) composeURLWithParameters :(NSString *)citySearch withParameter2:(NSInteger)count {
-//	NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-//	NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
-//	NSString *limit_data_fetch=[NSString stringWithFormat:@"%ld",count];
-//	NSURLQueryItem *limit=[NSURLQueryItem queryItemWithName:@"count" value:limit_data_fetch];
-//	components.queryItems=@[city,limit];
-//	NSURL *url=components.URL;
-//	return url;
-//	
-//}
+#pragma mark-Making URL along with Parameters
++(NSURL *) composeURLWithParameters :(NSString *)citySearch withParameter2:(NSInteger)count {
+	NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
+	NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
+	NSString *limit_data_fetch=[NSString stringWithFormat:@"%ld",count];
+	NSURLQueryItem *limit=[NSURLQueryItem queryItemWithName:@"count" value:limit_data_fetch];
+	components.queryItems=@[city,limit];
+	NSURL *url=components.URL;
+	return url;
+	
+}
 
 @end

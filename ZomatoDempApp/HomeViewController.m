@@ -48,9 +48,13 @@
 
 -(void)selectedLocationAction:(id)sender
 {
-	NSLog(@"share action");
+	[self performSegueWithIdentifier:@"HomeToLocation" sender:sender];
 }
 
+
+-(IBAction)unwindfromLocationVC:(UIStoryboardSegue *)unwindSegue{
+	//to come back from signup view controller
+}
 
 
 

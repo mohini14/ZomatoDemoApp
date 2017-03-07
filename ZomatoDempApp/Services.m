@@ -57,7 +57,7 @@
 
 +(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser
 {
-	NSString * urlStr =[urlString stringByAppendingString:service];
+	NSString * urlStr =[urlString stringByReplacingOccurrencesOfString:@"<service>" withString:service];
 	// urlString=[urlString stringByAppendingString:data];
 	NSURL *url=[NSURL URLWithString:urlStr];
 	NSLog(@"URL String=%@",url.description);

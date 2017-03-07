@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationResults" rowHeight="40" id="KGk-i7-Jjw" customClass="SearchedResultsCVCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cityNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-xr-0Vb">
+                        <rect key="frame" x="80" y="13" width="222" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Fqn-zQ-y8Z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqP-3z-gli">
+                        <rect key="frame" x="80" y="34.5" width="230" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="NB7-Ck-Isn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh1-Bq-vY4">
+                        <rect key="frame" x="10" y="10" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="RX8-69-Jkq"/>
+                            <constraint firstAttribute="width" constant="60" id="jNS-kq-lTs"/>
+                        </constraints>
+                        <state key="normal" title="City:">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYt-Vq-11N">
+                        <rect key="frame" x="10" y="29.5" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Lrn-0u-wLH"/>
+                            <constraint firstAttribute="width" constant="60" id="mi2-Cq-DXd"/>
+                        </constraints>
+                        <state key="normal" title="Country:">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omR-MW-DLr">
+                        <rect key="frame" x="0.0" y="58.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="00C-z2-Rfo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kh1-Bq-vY4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="49M-H8-e4A"/>
+                    <constraint firstItem="6yq-xr-0Vb" firstAttribute="leading" secondItem="Kh1-Bq-vY4" secondAttribute="trailing" constant="10" id="97U-bk-mVC"/>
+                    <constraint firstAttribute="bottom" secondItem="nYt-Vq-11N" secondAttribute="bottom" constant="10" id="9jS-xo-kaR"/>
+                    <constraint firstItem="Kh1-Bq-vY4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CMD-uh-EB6"/>
+                    <constraint firstItem="6yq-xr-0Vb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="EhG-N6-Voz"/>
+                    <constraint firstItem="WqP-3z-gli" firstAttribute="leading" secondItem="nYt-Vq-11N" secondAttribute="trailing" constant="10" id="RMx-Ak-K9i"/>
+                    <constraint firstAttribute="bottom" secondItem="omR-MW-DLr" secondAttribute="bottom" id="Vsl-4z-uw5"/>
+                    <constraint firstAttribute="trailing" secondItem="WqP-3z-gli" secondAttribute="trailing" constant="10" id="WHa-0M-lUA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6yq-xr-0Vb" secondAttribute="trailing" constant="10" id="bV4-dI-WMN"/>
+                    <constraint firstAttribute="bottom" secondItem="WqP-3z-gli" secondAttribute="bottom" constant="10" id="cji-dS-KI7"/>
+                    <constraint firstItem="nYt-Vq-11N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="twA-Mt-DJb"/>
+                    <constraint firstAttribute="trailing" secondItem="omR-MW-DLr" secondAttribute="trailing" id="vDi-Jk-lBe"/>
+                    <constraint firstItem="omR-MW-DLr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xkt-do-2FY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cityNameLabel" destination="6yq-xr-0Vb" id="Wi9-Ia-Rlw"/>
+                <outlet property="countryNameLabel" destination="WqP-3z-gli" id="Cjj-kt-V7m"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="50"/>
+        </tableViewCell>
+    </objects>
+</document>
