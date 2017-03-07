@@ -12,6 +12,9 @@
 		1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D11E6D5402000C2A44 /* CityDetails.m */; };
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
+		155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B91861E6DBF8C005CC114 /* HomeViewController.m */; };
+		155B91891E6DEC00005CC114 /* CustomiseLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155B91881E6DEC00005CC114 /* CustomiseLabel.xib */; };
+		155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B918B1E6DED56005CC114 /* CustomizeLabel.m */; };
 		159A225D1E6C01FF004DC61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A225C1E6C01FF004DC61B /* main.m */; };
 		159A22601E6C01FF004DC61B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A225F1E6C01FF004DC61B /* AppDelegate.m */; };
 		159A22631E6C01FF004DC61B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A22621E6C01FF004DC61B /* ViewController.m */; };
@@ -47,6 +50,11 @@
 		1541B3D51E6D71F0000C2A44 /* SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionData.m; sourceTree = "<group>"; };
 		1541B3DC1E6D8231000C2A44 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		1541B3DD1E6D8231000C2A44 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		155B91851E6DBF8C005CC114 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		155B91861E6DBF8C005CC114 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		155B91881E6DEC00005CC114 /* CustomiseLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomiseLabel.xib; sourceTree = "<group>"; };
+		155B918A1E6DED56005CC114 /* CustomizeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeLabel.h; sourceTree = "<group>"; };
+		155B918B1E6DED56005CC114 /* CustomizeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeLabel.m; sourceTree = "<group>"; };
 		159A22581E6C01FF004DC61B /* ZomatoDempApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoDempApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A225C1E6C01FF004DC61B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		159A225E1E6C01FF004DC61B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +179,8 @@
 			children = (
 				159A22611E6C01FF004DC61B /* ViewController.h */,
 				159A22621E6C01FF004DC61B /* ViewController.m */,
+				155B91851E6DBF8C005CC114 /* HomeViewController.h */,
+				155B91861E6DBF8C005CC114 /* HomeViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -211,6 +221,8 @@
 				1528E11F1E6D396700042D16 /* SearchBar.m */,
 				159A22801E6C0429004DC61B /* CollectionViewCell.h */,
 				159A22811E6C0429004DC61B /* CollectionViewCell.m */,
+				155B918A1E6DED56005CC114 /* CustomizeLabel.h */,
+				155B918B1E6DED56005CC114 /* CustomizeLabel.m */,
 			);
 			name = "Customise View";
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 			children = (
 				159A22821E6C0429004DC61B /* CollectionViewCell.xib */,
 				1528E1211E6D399400042D16 /* SearchBar.xib */,
+				155B91881E6DEC00005CC114 /* CustomiseLabel.xib */,
 			);
 			name = "XIB Files";
 			sourceTree = "<group>";
@@ -363,6 +376,7 @@
 				159A22681E6C01FF004DC61B /* Assets.xcassets in Resources */,
 				159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */,
 				159A22661E6C01FF004DC61B /* Main.storyboard in Resources */,
+				155B91891E6DEC00005CC114 /* CustomiseLabel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +406,8 @@
 				159A225D1E6C01FF004DC61B /* main.m in Sources */,
 				1541B3DE1E6D8231000C2A44 /* Location.m in Sources */,
 				1528E1201E6D396700042D16 /* SearchBar.m in Sources */,
+				155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */,
+				155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

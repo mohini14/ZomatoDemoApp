@@ -19,8 +19,8 @@
 		self.city_name=dictionary[KCITY_NAME_KEY];
 		self.country_id=dictionary[KCOUNTRY_ID_KEY];
 		self.country_name=dictionary[KCOUNTRY_NAME];
-		self.lat=dictionary[KLATITUDE_KEY];
-		self.lon=dictionary[KLONGITUDE_KEY];
+		self.lat=[dictionary[KLATITUDE_KEY] doubleValue];
+		self.lon=[dictionary[KLONGITUDE_KEY]doubleValue];
 		return self;
 	}
 	return nil;

@@ -18,8 +18,8 @@
 
 @property NSNumber *city_id;
 @property NSString *city_name;
-@property NSNumber *lat;
-@property NSNumber *lon;
+@property double lat;
+@property double lon;
 @property NSString *country_name;
 @property NSNumber *country_id;
 

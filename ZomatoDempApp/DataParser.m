@@ -36,40 +36,40 @@
 
 
 
-+(NSURL *) composeURLWithParametersForLOCATION :(NSString *)citySearch {
-		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-		NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
-		components.queryItems=@[city];
-		NSURL *url=components.URL;
-		return url;
-	
-	
-}
-
-
-
-+(void) getLocation :(NSString *)citySearch withCompletionHandler :(void (^)(Location *loc))callBackToMainVC{
-	NSURL *url=[DataParser composeURLWithParametersForLOCATION :(NSString *)citySearch];
-	__block NSURLRequest *request;
-		NSString *urlString=url.absoluteString;
-		[Services makeRequestWithParametres:urlString withService:@"locations" withCompletionHandler:^(NSURLRequest *recievedRequest)
-		 {
-			request=recievedRequest;
-			[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-		   {
-			 //NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
-			 if(errorMsg==nil)
-			 {
-				 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
-			 }
-			 callBackToMainVC(a,errorMsg);
-		 }];
-		}];
-
-	
-	
-}
-
+//+(NSURL *) composeURLWithParametersForLOCATION :(NSString *)citySearch {
+//		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
+//		NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
+//		components.queryItems=@[city];
+//		NSURL *url=components.URL;
+//		return url;
+//	
+//	
+//}
+//
+//
+//
+//+(void) getLocation :(NSString *)citySearch withCompletionHandler :(void (^)(Location *loc))callBackToMainVC{
+//	NSURL *url=[DataParser composeURLWithParametersForLOCATION :(NSString *)citySearch];
+//	__block NSURLRequest *request;
+//		NSString *urlString=url.absoluteString;
+//		[Services makeRequestWithParametres:urlString withService:@"locations" withCompletionHandler:^(NSURLRequest *recievedRequest)
+//		 {
+//			request=recievedRequest;
+//			[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
+//		   {
+//			 //NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
+//			 if(errorMsg==nil)
+//			 {
+//				 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
+//			 }
+//			 callBackToMainVC(a,errorMsg);
+//		 }];
+//		}];
+//
+//	
+//	
+//}
+//
 
 
 //+(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
