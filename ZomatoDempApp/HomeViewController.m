@@ -34,31 +34,33 @@
 -(void) setUpVC
 {
     [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+	self.tabBar.backgroundColor= [UIColor blackColor];
+
     
-    [self setUpTabBar];
-    
+//    [self setUpTabBar];
+	
 
 }
 
--(void) setUpTabBar
-{
-    UITabBarItem *tabBarItem1 = [self.tabBar.items objectAtIndex:0];
-    UITabBarItem *tabBarItem2 = [self.tabBar.items objectAtIndex:1];
-    UITabBarItem *tabBarItem3 = [self.tabBar.items objectAtIndex:2];
-    UITabBarItem *tabBarItem4 = [self.tabBar.items objectAtIndex:3];
-    UITabBarItem *tabBarItem5 = [self.tabBar.items objectAtIndex:4];
-    
-    tabBarItem1.title = @"Home";
-    tabBarItem2.title = @"collections";
-    tabBarItem3.title = @"";
-    tabBarItem4.title = @"Feed";
-    tabBarItem5.title = @"Account";
+//-(void) setUpTabBar
+//{
+//    UITabBarItem *tabBarItem1 = [self.tabBar.items objectAtIndex:0];
+//    UITabBarItem *tabBarItem2 = [self.tabBar.items objectAtIndex:1];
+//    UITabBarItem *tabBarItem3 = [self.tabBar.items objectAtIndex:2];
+//    UITabBarItem *tabBarItem4 = [self.tabBar.items objectAtIndex:3];
+//    UITabBarItem *tabBarItem5 = [self.tabBar.items objectAtIndex:4];
 //    
-//    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
-//    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
-//    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
-//    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
-//    
-////    return YES;
-}
+//    tabBarItem1.title = @"Home";
+//    tabBarItem2.title = @"collections";
+//    tabBarItem3.title = @"";
+//    tabBarItem4.title = @"Feed";
+//    tabBarItem5.title = @"Account";
+////    
+////    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+////    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
+////    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
+////    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+////    
+//////    return YES;
+//}
 @end

@@ -62,7 +62,7 @@
 //			 {
 //				 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
 //			 }
-//			 callBackToMainVC(a,errorMsg);
+//			 callBackToMainVC(array,errorMsg);
 //		 }];
 //		}];
 //

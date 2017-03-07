@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nVx-3g-jJi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nVx-3g-jJi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,17 +131,65 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Puv-8D-Ank" userLabel="Container view">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-98-MtC">
+                                                        <rect key="frame" x="15" y="50" width="345" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="eaU-0A-fan"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Book a Table" image="Screen Shot 2017-02-28 at 1.11.51 PM.png">
+                                                            <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJp-M2-hDz">
+                                                        <rect key="frame" x="15" y="100" width="345" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="GSF-8W-rWf"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="jUN-xI-Fzl"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Browse Nearby Places" image="Screen Shot 2017-02-28 at 1.12.22 PM.png">
+                                                            <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.60640799246554167" green="0.89262107959511983" blue="0.98886819948186533" alpha="0.051468970070422539" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="UJp-M2-hDz" secondAttribute="trailing" constant="15" id="HTr-bD-JxM"/>
+                                                    <constraint firstItem="UJp-M2-hDz" firstAttribute="leading" secondItem="Puv-8D-Ank" secondAttribute="leading" constant="15" id="I4V-Zc-EhX"/>
                                                     <constraint firstAttribute="height" constant="800" id="MXZ-rt-y1Y"/>
+                                                    <constraint firstItem="IlG-98-MtC" firstAttribute="top" secondItem="Puv-8D-Ank" secondAttribute="top" constant="50" id="bzu-aJ-Qp5"/>
+                                                    <constraint firstItem="IlG-98-MtC" firstAttribute="leading" secondItem="Puv-8D-Ank" secondAttribute="leading" constant="15" id="en7-eu-MFu"/>
+                                                    <constraint firstItem="UJp-M2-hDz" firstAttribute="top" secondItem="IlG-98-MtC" secondAttribute="bottom" constant="10" id="gDp-bm-ap4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IlG-98-MtC" secondAttribute="trailing" constant="15" id="zXe-m6-50L"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-CF-rwm">
+                                                <rect key="frame" x="14" y="0.0" width="347" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="mj8-be-r9H"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title=" Order Food" image="Screen Shot 2017-02-28 at 1.12.45 PM.png">
+                                                    <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Puv-8D-Ank" secondAttribute="trailing" id="1pG-fm-qqi"/>
+                                            <constraint firstItem="dBg-CF-rwm" firstAttribute="leading" secondItem="7mG-Uj-IZM" secondAttribute="leading" constant="14" id="BBk-mx-xaI"/>
                                             <constraint firstAttribute="bottom" secondItem="Puv-8D-Ank" secondAttribute="bottom" id="HVR-6u-zLw"/>
                                             <constraint firstItem="Puv-8D-Ank" firstAttribute="leading" secondItem="7mG-Uj-IZM" secondAttribute="leading" id="VUm-Jl-FCT"/>
+                                            <constraint firstItem="dBg-CF-rwm" firstAttribute="top" secondItem="7mG-Uj-IZM" secondAttribute="top" id="dcu-W9-1eW"/>
                                             <constraint firstItem="Puv-8D-Ank" firstAttribute="top" secondItem="7mG-Uj-IZM" secondAttribute="top" id="lbM-qi-odT"/>
+                                            <constraint firstAttribute="trailing" secondItem="dBg-CF-rwm" secondAttribute="trailing" constant="14" id="tZW-Vz-SkG"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
@@ -153,34 +202,23 @@
                                     <constraint firstItem="Puv-8D-Ank" firstAttribute="width" secondItem="PX9-kV-g0H" secondAttribute="width" id="YFq-rg-C1J"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-YA-tUo">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdK-bx-3fu">
+                                <rect key="frame" x="24" y="631" width="40" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ZPe-yA-KFq"/>
+                                    <constraint firstAttribute="width" constant="40" id="1fx-aN-FxL"/>
+                                    <constraint firstAttribute="height" constant="30" id="2I9-Uq-Mih"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem title="Title" id="KI4-cK-KRS">
-                                        <leftBarButtonItems>
-                                            <barButtonItem title="Home" id="f1t-YX-Q4s"/>
-                                            <barButtonItem title="Collections" id="EVP-qR-sPA"/>
-                                            <barButtonItem systemItem="add" id="7lc-Qw-xsg"/>
-                                        </leftBarButtonItems>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="UPR-QU-NOu" userLabel="Feed"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                                <state key="normal" title="Button" image="HOMEVISIT-Grey.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ege-YA-tUo" secondAttribute="bottom" id="3nP-5T-Cac"/>
-                            <constraint firstAttribute="trailing" secondItem="Ege-YA-tUo" secondAttribute="trailing" id="5BC-aG-qYm"/>
                             <constraint firstAttribute="trailing" secondItem="PX9-kV-g0H" secondAttribute="trailing" id="DY5-mO-R7E"/>
+                            <constraint firstItem="JdK-bx-3fu" firstAttribute="leading" secondItem="NGj-Kq-kwc" secondAttribute="leadingMargin" constant="8" id="Mu4-xl-8ae"/>
                             <constraint firstItem="PX9-kV-g0H" firstAttribute="top" secondItem="ADX-Xi-bcD" secondAttribute="bottom" id="X1Z-2x-L5g"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JdK-bx-3fu" secondAttribute="bottom" constant="6" id="YWP-nB-Tgs"/>
                             <constraint firstItem="37H-pj-RIj" firstAttribute="top" secondItem="PX9-kV-g0H" secondAttribute="bottom" id="bt6-B5-qUu"/>
                             <constraint firstItem="PX9-kV-g0H" firstAttribute="leading" secondItem="NGj-Kq-kwc" secondAttribute="leading" id="gnh-ge-CNu"/>
-                            <constraint firstItem="Ege-YA-tUo" firstAttribute="leading" secondItem="NGj-Kq-kwc" secondAttribute="leading" id="uad-zI-QVq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -198,13 +236,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomNavigationBar" destination="KI4-cK-KRS" id="38G-Mo-gvr"/>
                         <outlet property="navigationItem" destination="NGR-Ny-mKB" id="yVi-Db-LGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuu-eV-hbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="36"/>
+            <point key="canvasLocation" x="2176.8000000000002" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CKf-9K-SGj">
@@ -380,4 +417,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="HOMEVISIT-Grey.png" width="320" height="311"/>
+        <image name="Screen Shot 2017-02-28 at 1.11.51 PM.png" width="39" height="32"/>
+        <image name="Screen Shot 2017-02-28 at 1.12.22 PM.png" width="37" height="34"/>
+        <image name="Screen Shot 2017-02-28 at 1.12.45 PM.png" width="34" height="34"/>
+    </resources>
 </document>

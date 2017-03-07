@@ -12,6 +12,6 @@
 @interface HomeViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITabBar *tabBar;
-@property (strong, nonatomic) IBOutlet UINavigationItem *bottomNavigationBar;
+
 
 @end
