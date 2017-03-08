@@ -80,7 +80,7 @@
 	{
 		[self.locationSearchBar becomeFirstResponder];
 		NSString *searchCity=self.locationSearchBar.text;
-		[DataParser getDetailsAboutCity:[searchCity lowercaseString] withCompletionHandler:^(NSArray *cityDetails, NSString *errorMsg)
+		[DataParser getCityDetails:[searchCity lowercaseString] withCompletionHandler:^(NSArray *cityDetails, NSString *errorMsg)
 		 {
 			 if(errorMsg==nil)
 			 {

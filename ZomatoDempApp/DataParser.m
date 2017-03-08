@@ -10,52 +10,52 @@
 
 @implementation DataParser
 
-+(void) getCategories :(void (^)(NSArray *categories,NSString * errorMsg))callBackToMainVC
-{
-    __block NSURLRequest *request;
-    
-    [Services makeRequest:ZOMATO_CATEGORY_FIELD withData:nil withCompletionHandler:^(NSURLRequest *recievedRequest)
-    {
-        request=recievedRequest;
-    }];
-    [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-     {
-		NSMutableArray *categories=[[NSMutableArray alloc]init];
-		if(errorMsg==nil)
-		{
-		 for(NSDictionary *obj in data[@"categories"])
-             {
-                 Category *category = [[Category alloc] initWithDictionary:obj];
-                 [categories addObject:category];
-			 }
-		}
-         callBackToMainVC(categories,errorMsg);
-    }];
-}
+//+(void) getCategories :(void (^)(NSArray *categories,NSString * errorMsg))callBackToMainVC
+//{
+//    __block NSURLRequest *request;
+//    
+//    [Services makeRequest:ZOMATO_CATEGORY_FIELD withData:nil withCompletionHandler:^(NSURLRequest *recievedRequest)
+//    {
+//        request=recievedRequest;
+//    }];
+//    [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
+//     {
+//		NSMutableArray *categories=[[NSMutableArray alloc]init];
+//		if(errorMsg==nil)
+//		{
+//		 for(NSDictionary *obj in data[@"categories"])
+//             {
+//                 Category *category = [[Category alloc] initWithDictionary:obj];
+//                 [categories addObject:category];
+//			 }
+//		}
+//         callBackToMainVC(categories,errorMsg);
+//    }];
+//}
 
 
 
-
-+(NSURL *) composeURLWithParametersForLOCATION :(double)lat withLongitude :(double)lon {
-		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-        NSString *latitude=[NSString stringWithFormat:@"%.20f", lat];
-        NSString *longitude=[NSString stringWithFormat:@"%.20f", lon];
-        NSURLQueryItem *latd=[NSURLQueryItem queryItemWithName:@"lat" value:latitude];
-        NSURLQueryItem *lond=[NSURLQueryItem queryItemWithName:@"lon" value:longitude];
-		components.queryItems=@[latd,lond];
-		NSURL *url=components.URL;
-		return url;
-	
-	
-}
+//
+//+(NSURL *) composeURLWithParametersForLOCATION :(double)lat withLongitude :(double)lon {
+//		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
+//        NSString *latitude=[NSString stringWithFormat:@"%.20f", lat];
+//        NSString *longitude=[NSString stringWithFormat:@"%.20f", lon];
+//        NSURLQueryItem *latd=[NSURLQueryItem queryItemWithName:@"lat" value:latitude];
+//        NSURLQueryItem *lond=[NSURLQueryItem queryItemWithName:@"lon" value:longitude];
+//		components.queryItems=@[latd,lond];
+//		NSURL *url=components.URL;
+//		return url;
+//	
+//	
+//}
 
 
 
 +(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC{
-    NSURL *url=[DataParser composeURLWithParametersForLOCATION :lat withLongitude :(double) lon];
+    //NSURL *url=[DataParser composeURLWithParametersForLOCATION :lat withLongitude :(double) lon];
 	__block NSURLRequest *request;
-		NSString *urlString=url.absoluteString;
-		[Services makeRequestWithParametres:urlString withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
+		//NSString *urlString=url.absoluteString;
+    [Services makeRequestWithParametres:[NSString stringWithFormat:@"https://developers.zomato.com/api/v2.1/<service>?lat=%f&lon=%f",lat,lon] withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
 		 {
 			request=recievedRequest;
              __block CityDetails *currentCity;
@@ -79,13 +79,16 @@
 
 
 
-+(void) getDetailsAboutCity :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
++(void) getCityDetails :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
 {
 	__block NSURLRequest *request;
-	//NSURL *url=[DataParser composeURLWithParameters:citySearch withParameter2:5];
-	//NSString *urlString=url.absoluteString;
-	[Services makeRequestWithParametres:@"https://developers.zomato.com/api/v2.1/<service>?q=delhi&count=10"
-							withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
+    NSDictionary *dict=@{ @"city"  : citySearch,
+                          @"count":[NSNumber numberWithInt:0]
+};
+	NSURL *url=[DataParser composeQueryParameters:dict];
+    NSURL *composedURL=[StringOperations composeURL:url withResource:@"cities"];
+	NSString *urlString=composedURL.absoluteString;
+	[Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
 	 {
 		request=recievedRequest;
 		[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
@@ -109,15 +112,26 @@
 
 
 #pragma mark-Making URL along with Parameters
-+(NSURL *) composeURLWithParameters :(NSString *)citySearch withParameter2:(NSInteger)count {
-	NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-	NSURLQueryItem *city=[NSURLQueryItem queryItemWithName:@"q" value:citySearch];
-	NSString *limit_data_fetch=[NSString stringWithFormat:@"%ld",count];
-	NSURLQueryItem *limit=[NSURLQueryItem queryItemWithName:@"count" value:limit_data_fetch];
-	components.queryItems=@[city,limit];
++(NSURL *) composeQueryParameters :(NSDictionary *)dict
+{
+	NSURLComponents *components=[NSURLComponents componentsWithString:@""];
+    NSMutableArray *parameters=[[NSMutableArray alloc]init];
+    for(NSString *obj in dict)
+    {
+        [parameters addObject:obj];
+    }
+    
+    components.queryItems=parameters;
 	NSURL *url=components.URL;
 	return url;
+   // NSURLComponents *components = [NSURLComponents componentsWithString:@"http://stackoverflow.com"];
+    NSURLQueryItem *search = [NSURLQueryItem queryItemWithName:@"q" value:@"ios"];
+    NSURLQueryItem *count = [NSURLQueryItem queryItemWithName:@"count" value:@"10"];
+    components.queryItems = @[ search, count ];
+    NSURL *url = components.URL; // h
 	
 }
+
+
 
 @end

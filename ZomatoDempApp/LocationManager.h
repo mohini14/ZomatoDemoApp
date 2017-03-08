@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import "Define.h"
 
 
 typedef void (^CompletionHandlerBlock)(double latitude,double longitude,NSError *error);

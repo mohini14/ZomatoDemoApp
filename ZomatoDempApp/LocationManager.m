@@ -32,6 +32,8 @@
 //method returns the latitude and longitude of current location
 -(void) getLocation :(void (^) (double latitude,double longitude,NSError *error))completionHandler{
 	self.completionHandlerBlock=completionHandler;
+    [self.locationManager requestAlwaysAuthorization];
+    [self.locationManager startUpdatingLocation];
 	[self.locationManager startUpdatingLocation];
 	self.isLocationUpdated = FALSE;
 	
@@ -43,6 +45,7 @@
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
 	self.completionHandlerBlock(0,0,error);
 }
+
 // method gives location if error is equal to nil
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	if(newLocation!=nil){

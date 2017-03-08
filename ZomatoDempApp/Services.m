@@ -11,9 +11,7 @@
 @implementation Services
 
 
-+(void) makeRequest :(NSString *)service withData :(NSString *) data withCompletionHandler :(void (^)(NSURLRequest *request))callBackToParser{
-    NSString * urlString =[ZOMATO_URL stringByAppendingString:service];
-   // urlString=[urlString stringByAppendingString:data];
++(void) makeRequest :(NSString *)urlString  withCompletionHandler :(void (^)(NSURLRequest *request))callBackToParser{
     NSURL *url=[NSURL URLWithString:urlString];
     NSLog(@"URL String=%@",url.description);
     NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
@@ -47,7 +45,7 @@
 			}
         }
         dispatch_async(dispatch_get_main_queue(), ^
-			{ // ask sir about that do we need to do it again and again even if we dont need UI element and pass it as parameter.
+			{
             callbackToParser(responseData,errorMsg);
             });
     }];
@@ -55,17 +53,17 @@
 }
 
 
-+(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser
-{
-	NSString * urlStr =[urlString stringByReplacingOccurrencesOfString:@"<service>" withString:service];
-	// urlString=[urlString stringByAppendingString:data];
-	NSURL *url=[NSURL URLWithString:urlStr];
-	NSLog(@"URL String=%@",url.description);
-	NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
-	[urlRequest setHTTPMethod:@"GET"];
-	[urlRequest setValue:ZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
-	callBackToParser(urlRequest);
-}
+//+(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser
+//{
+//	//NSString * urlStr =[urlString stringByReplacingOccurrencesOfString:@"<service>" withString:service];
+//	// urlString=[urlString stringByAppendingString:data];
+//	NSURL *url=[NSURL URLWithString:urlString];
+//	NSLog(@"URL String=%@",url.description);
+//	NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
+//	[urlRequest setHTTPMethod:@"GET"];
+//	[urlRequest setValue:ZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
+//	callBackToParser(urlRequest);
+//}
 
 @end
 

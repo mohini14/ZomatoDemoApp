@@ -11,7 +11,7 @@
 
 @interface Services : NSObject
 
-+(void) makeRequest :(NSString *) service withData :(NSString *) data withCompletionHandler :(void (^)(NSURLRequest *request))callBackToParser;
++(void) makeRequest :(NSString *)urlString  withCompletionHandler :(void (^)(NSURLRequest *request))callBackToParser;
 + (void) sendRequest:(NSURLRequest *) request completionHandler:(void (^) (NSDictionary *,NSString *))callbackToParser;
-+(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser;
+//+(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser;
 @end
