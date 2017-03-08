@@ -16,6 +16,7 @@
 	NSArray *cities;
 	double lat;
 	double lon;
+	NSInteger clickedRow;
 }
 
 - (void)viewDidLoad {
@@ -71,6 +72,13 @@
 	return 60;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	clickedRow=indexPath.row;
+	[self onClickShowResturantsInCity];
+	
+}
+
 
 #pragma mark- ACTIONS ON VC
 - (IBAction)searchButton:(id)sender
@@ -84,14 +92,15 @@
 		 {
 			 if(errorMsg==nil)
 			 {
-				 self.searchedResultsTableHieght.constant=340;
+				 NSInteger tableHieght=[cityDetails count ]*60;
+				 self.searchedResultsTableHieght.constant=tableHieght;
 				 self.locationSearchBar.text=nil;
 				 cities=cityDetails;
 				 [self.searchedResultsTable reloadData];
 			 }
 			 else
 			 {
-				 [AlertDisplay showAlertPopupWithTitle:ERROR_MSG forView:self];
+				 [AlertDisplay showAlertPopupWithTitle:KERROR_MSG forView:self];
 			 }
 		 }];
 	}
@@ -107,9 +116,16 @@
              lat=latitude;
              lon=longitude;
              [DataParser getLocation:lat withLongitude:lon withCompletionHandler:^(CityDetails *city, NSString *errorMsg)
-             {
-                 [AlertDisplay showAlertPopupWithTitle:city.name forView:self];
-             }];
+			  {
+				  NSString *str=[NSString stringWithFormat:@"%@%@",@"city :",city.name];
+				  [AlertDisplay showAlertPopupWithTitle:str  forView:self withBlock:^{
+					  SessionData *session=[SessionData getInstance];
+					  session.currentSelectedLocationButtonTitle=city.name;
+					  session.currentCityDetails=city;
+					  [self performSegueWithIdentifier:@"unwindfromLocation" sender:self];
+					  //[self.navigationController popViewControllerAnimated:YES];
+				  }];
+				}];
              
          }
          else
@@ -118,6 +134,19 @@
          }
      }];
 
+}
+
+-(void) onClickShowResturantsInCity
+{
+	CityDetails *city=cities[clickedRow];
+	
+	NSString *str=[NSString stringWithFormat:@"%@%@",@"city :",city.name];
+	[AlertDisplay showAlertPopupWithTitle:str  forView:self withBlock:^{
+		SessionData *session=[SessionData getInstance];
+		session.currentSelectedLocationButtonTitle=city.name;
+		session.currentCityDetails=city;
+		[self performSegueWithIdentifier:@"unwindfromLocation" sender:self];
+	}];
 }
 
 

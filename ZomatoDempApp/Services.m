@@ -16,7 +16,7 @@
     NSLog(@"URL String=%@",url.description);
     NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
     [urlRequest setHTTPMethod:@"GET"];
-    [urlRequest setValue:ZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
+    [urlRequest setValue:KZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
     callBackToParser(urlRequest);
 
 }
@@ -35,7 +35,7 @@
 		
         if(error!=nil)
 		{
-            errorMsg=SERVER_ERROR;//if server erro ,status code==5XX
+            errorMsg=KSERVER_ERROR;//if server erro ,status code==5XX
         }
 		else
 		{

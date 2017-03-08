@@ -14,6 +14,7 @@
 @interface AlertDisplay : NSObject
 
 + (void)showAlertPopupWithTitle:(NSString *)message forView:(UIViewController *)view ;
++(void)  showAlertPopupWithTitle:(NSString *)message forView :(UIViewController *)view withBlock:(void (^)())callBackTocalledVC;
 
 
 @end

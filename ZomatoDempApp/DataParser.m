@@ -55,7 +55,9 @@
     //NSURL *url=[DataParser composeURLWithParametersForLOCATION :lat withLongitude :(double) lon];
 	__block NSURLRequest *request;
 		//NSString *urlString=url.absoluteString;
-    [Services makeRequestWithParametres:[NSString stringWithFormat:@"https://developers.zomato.com/api/v2.1/<service>?lat=%f&lon=%f",lat,lon] withService:@"cities" withCompletionHandler:^(NSURLRequest *recievedRequest)
+	NSString *urlParameters=[NSString stringWithFormat:KZOMATO_QUERY_PARAMETRE_LOCATION,lat,lon];
+	NSString *urlString=[NSString stringWithFormat:@"%@%@%@%@%@",KZOMATO_URL_HOST,KZOMATO_API,KZOMATO_VERSION,@"cities",urlParameters];
+	[Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
 		 {
 			request=recievedRequest;
              __block CityDetails *currentCity;
@@ -82,12 +84,15 @@
 +(void) getCityDetails :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
 {
 	__block NSURLRequest *request;
-    NSDictionary *dict=@{ @"city"  : citySearch,
-                          @"count":[NSNumber numberWithInt:0]
-};
-	NSURL *url=[DataParser composeQueryParameters:dict];
-    NSURL *composedURL=[StringOperations composeURL:url withResource:@"cities"];
-	NSString *urlString=composedURL.absoluteString;
+//    NSDictionary *dict=@{ @"city"  : citySearch,
+//                          @"count":[NSNumber numberWithInt:10]
+//};
+	///NSURL *url=[DataParser composeQueryParameters:dict];
+   // NSURL *composedURL=[StringOperations composeURL:url withResource:@"cities"];
+	//NSString *urlString=composedURL.absoluteString;
+	//NSString *urlString=[StringOperations composeURL:dict withResource:@"cities"];
+	NSString *urlParameter =[NSString stringWithFormat:KZOMATO_QUERY_PARAMETER_CITIES,citySearch,10];
+	NSString *urlString=[NSString stringWithFormat:@"%@%@%@%@%@",KZOMATO_URL_HOST,KZOMATO_API,KZOMATO_VERSION,@"cities",urlParameter];
 	[Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
 	 {
 		request=recievedRequest;
@@ -111,26 +116,36 @@
 }
 
 
-#pragma mark-Making URL along with Parameters
-+(NSURL *) composeQueryParameters :(NSDictionary *)dict
-{
-	NSURLComponents *components=[NSURLComponents componentsWithString:@""];
-    NSMutableArray *parameters=[[NSMutableArray alloc]init];
-    for(NSString *obj in dict)
-    {
-        [parameters addObject:obj];
-    }
-    
-    components.queryItems=parameters;
-	NSURL *url=components.URL;
-	return url;
-   // NSURLComponents *components = [NSURLComponents componentsWithString:@"http://stackoverflow.com"];
-    NSURLQueryItem *search = [NSURLQueryItem queryItemWithName:@"q" value:@"ios"];
-    NSURLQueryItem *count = [NSURLQueryItem queryItemWithName:@"count" value:@"10"];
-    components.queryItems = @[ search, count ];
-    NSURL *url = components.URL; // h
-	
-}
+#pragma mark-Composing URL QUERY PARAMETRS 
+//+(NSURL *) composeQueryParameters :(NSDictionary *)dict
+//{
+//	NSURLComponents *components=[NSURLComponents componentsWithString:@""];
+//    NSMutableArray *parameters=[[NSMutableArray alloc]init];
+//    for(NSString *obj in dict)
+//    {
+//		NSString *val;
+//		NSLog(@"key..=%@,value...=%@",obj,[dict objectForKey:obj]);
+//		if([StringOperations isInteger:[dict valueForKey:obj]] )
+//		{
+//			val=[[dict valueForKey:obj]stringValue];
+//		}
+//		else
+//		{
+//			val=[dict valueForKey:obj];
+//		}
+//        [parameters addObject:[NSURLQueryItem queryItemWithName:obj value:val]];
+//    }
+//    
+//    components.queryItems=parameters;
+//	NSURL *url=components.URL;
+//	return url;
+//   // NSURLComponents *components = [NSURLComponents componentsWithString:@"http://stackoverflow.com"];
+////    NSURLQueryItem *search = [NSURLQueryItem queryItemWithName:@"q" value:@"ios"];
+////    NSURLQueryItem *count = [NSURLQueryItem queryItemWithName:@"count" value:@"10"];
+////    components.queryItems = @[ search, count ];
+////    NSURL *url = components.URL; // h
+////	
+//}
 
 
 

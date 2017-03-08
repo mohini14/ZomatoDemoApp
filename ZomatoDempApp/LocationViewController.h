@@ -13,6 +13,8 @@
 #import "AlertDisplay.h"
 #import "Define.h"
 #import "LocationManager.h"
+#import "HomeViewController.h"
+#import "SessionData.h"
 
 @interface LocationViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
@@ -21,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *searchedResultsTable;
 @property (weak, nonatomic) IBOutlet UITableView *recentlySearchedPlacesTable;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchedResultsTableHieght;
+@property (strong,nonatomic) HomeViewController *homeVCObj;
 
 
 - (IBAction)searchButton:(id)sender;

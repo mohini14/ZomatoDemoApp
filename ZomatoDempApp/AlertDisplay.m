@@ -13,10 +13,24 @@
 
 + (void)showAlertPopupWithTitle:(NSString *)message forView:(UIViewController *)view {
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(APP_NAME_CONSTANT, nil) message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(KAPP_NAME_CONSTANT, nil) message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(ALERT_TITLE_OK, nil) style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:ok];
     [view presentViewController:alertController animated:YES completion:nil];
+}
+
+
++(void)  showAlertPopupWithTitle:(NSString *)message forView :(UIViewController *)view withBlock:(void (^)())callBackTocalledVC{
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(KAPP_NAME_CONSTANT, nil) message:message preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(ALERT_TITLE_OK, nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+		callBackTocalledVC();
+		
+	}];
+	[alertController addAction:ok];
+	
+[view presentViewController:alertController animated:YES completion:nil];
+
+
 }
 
 @end

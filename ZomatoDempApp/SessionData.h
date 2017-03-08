@@ -11,9 +11,11 @@
 @interface SessionData : NSObject
 
 @property (strong,nonatomic) NSArray *currentCityDetails;
+@property (strong,nonatomic) NSString *currentSelectedLocationButtonTitle;
 
 
 +(instancetype)getInstance;
+
 
 
 @end

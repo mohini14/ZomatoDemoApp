@@ -11,6 +11,7 @@
 
 @interface StringOperations : NSString
 +(NSURL *) composeURL :(NSURL *) queryParameters withResource :(NSString *)resource;
++(BOOL) isInteger :(NSObject *)obj;
 
 
 @end

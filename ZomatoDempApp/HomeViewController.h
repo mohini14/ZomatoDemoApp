@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SessionData.h"
 
 
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *selectLocationButton;
+@property (strong,nonatomic) NSString *selectLocationButtonTitle;
+@property (strong,nonatomic) SessionData *session;
 
+-(IBAction)unwindfromLocationVC:(UIStoryboardSegue *)unwindSegue;
+-(IBAction)unwindfromLocation:(UIStoryboardSegue *)unwindSegue;
 
 @end

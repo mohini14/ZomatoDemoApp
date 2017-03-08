@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#define ZOMATO_URL_HOST @"https://developers.zomato.com/"
-#define ZOMATO_API @"api/"
-#define ZOMATO_VERSION @"v2.1/"
-#define ZOMATO_API_KEY @"eca1d4a6765f00203615bcc044ff371a"
-#define ZOMATO_CATEGORY_FIELD @"categories"
-#define ZOMATO_CITYDETAILS_FIELD @"cities"
+#define KZOMATO_URL_HOST @"https://developers.zomato.com/"
+#define KZOMATO_API @"api/"
+#define KZOMATO_VERSION @"v2.1/"
+#define KZOMATO_API_KEY @"eca1d4a6765f00203615bcc044ff371a"
+#define KZOMATO_CATEGORY_FIELD @"categories"
+#define KZOMATO_CITYDETAILS_FIELD @"cities"
+#define KZOMATO_QUERY_PARAMETER_CITIES @"?q=%@&count=%d"
+#define KZOMATO_QUERY_PARAMETRE_LOCATION @"?lat=%f&lon=%f"
 
-#define APP_NAME_CONSTANT @"ZOMATO"
+#define KAPP_NAME_CONSTANT @"ZOMATO"
 
-#define SERVER_ERROR @"SERVER ERROR"
-#define ERROR_MSG @"SOMETHING WENT WRONG"
+#define KSERVER_ERROR @"SERVER ERROR"
+#define KERROR_MSG @"SOMETHING WENT WRONG"
 
 @interface Define : NSObject
 

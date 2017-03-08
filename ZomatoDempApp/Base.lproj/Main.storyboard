@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A0N-zJ-n7H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A0N-zJ-n7H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -293,11 +293,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fUN-Wu-hPY">
-                        <barButtonItem key="leftBarButtonItem" title="Selected Location" id="1Cg-6R-24E">
+                        <barButtonItem key="leftBarButtonItem" id="1Cg-6R-24E">
                             <inset key="imageInsets" minX="100" minY="20" maxX="21" maxY="13"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="fzB-ps-eT4" kind="presentation" identifier="HomeToLocation" id="1Dv-wm-6Jy"/>
+                                <segue destination="X0e-UP-f3A" kind="show" identifier="HomeToLocation" id="aGk-5c-G3M"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -309,10 +309,13 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectLocationButton" destination="1Cg-6R-24E" id="3LT-Wm-7gI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2L-Or-qnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="19"/>
+            <point key="canvasLocation" x="3913" y="12"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="vTt-SO-Sg1">
@@ -412,9 +415,6 @@
                     <navigationItem key="navigationItem" id="dGo-fg-F0b">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fyQ-kP-5iB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="AU4-52-bnz" kind="unwind" unwindAction="unwindfromLocationVC:" id="New-ue-VZM"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Select Location" id="eNn-tT-mEb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -428,12 +428,31 @@
                         <outlet property="locationSearchBar" destination="8Y6-yH-ayd" id="0Tu-Fk-Roq"/>
                         <outlet property="searchedResultsTable" destination="Aml-Lb-ufH" id="cbs-3k-sds"/>
                         <outlet property="searchedResultsTableHieght" destination="zDX-aa-84b" id="Iwf-12-2qA"/>
+                        <segue destination="AU4-52-bnz" kind="unwind" identifier="unwindfromLocation" unwindAction="unwindfromLocation:" id="JaG-5m-pTE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBZ-Pe-SZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="AU4-52-bnz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5632.8000000000002" y="19.340329835082461"/>
+            <point key="canvasLocation" x="4694" y="12"/>
+        </scene>
+        <!--City Resturant View Controller-->
+        <scene sceneID="VBa-5g-ufW">
+            <objects>
+                <viewController id="DLt-eq-t0e" customClass="CityResturantViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eYJ-a3-MHZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HGO-gp-5Ap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qr6-sa-aVl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yb6-Qi-rdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5402" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zpx-5s-zdt">
@@ -452,24 +471,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaV-95-fgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2639" y="36"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xR0-gf-mla">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fzB-ps-eT4" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l5N-kd-TLY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="X0e-UP-f3A" kind="relationship" relationship="rootViewController" id="dKg-Ye-V5H"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FCo-Mg-9Ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4693.6000000000004" y="19.340329835082461"/>
         </scene>
     </scenes>
     <resources>
