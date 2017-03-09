@@ -16,11 +16,11 @@
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
 		155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B91861E6DBF8C005CC114 /* HomeViewController.m */; };
-		155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 155B918B1E6DED56005CC114 /* CustomizeLabel.m */; };
 		15669BD41E6EC0380016EBA4 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BD31E6EC0380016EBA4 /* LocationViewController.m */; };
 		15669BDA1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */; };
 		15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */; };
 		15669BDE1E6EE7750016EBA4 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BDD1E6EE7750016EBA4 /* LocationManager.m */; };
+		156B78E81E713F9200E72B1B /* ComposeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 156B78E71E713F9200E72B1B /* ComposeURL.m */; };
 		1578989E1E6F24030002D60F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1578989D1E6F24030002D60F /* CoreLocation.framework */; };
 		15789C061E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15789C031E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png */; };
 		15789C091E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15789C081E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png */; };
@@ -66,8 +66,6 @@
 		1541B3DD1E6D8231000C2A44 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		155B91851E6DBF8C005CC114 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		155B91861E6DBF8C005CC114 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		155B918A1E6DED56005CC114 /* CustomizeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeLabel.h; sourceTree = "<group>"; };
-		155B918B1E6DED56005CC114 /* CustomizeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeLabel.m; sourceTree = "<group>"; };
 		15669BD21E6EC0380016EBA4 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		15669BD31E6EC0380016EBA4 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		15669BD71E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchedResultsCVCellTableViewCell.h; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchedResultsCVCellTableViewCell.xib; sourceTree = "<group>"; };
 		15669BDC1E6EE7750016EBA4 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		15669BDD1E6EE7750016EBA4 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		156B78E61E713F9200E72B1B /* ComposeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeURL.h; sourceTree = "<group>"; };
+		156B78E71E713F9200E72B1B /* ComposeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeURL.m; sourceTree = "<group>"; };
 		1578989D1E6F24030002D60F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		15789C031E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-02-28 at 1.12.22 PM.png"; sourceTree = "<group>"; };
 		15789C081E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-02-28 at 1.12.45 PM.png"; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		159A22871E6C0E75004DC61B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				159A22901E6C2428004DC61B /* Data Mnager */,
 				159A22881E6C0E86004DC61B /* App */,
+				159A22901E6C2428004DC61B /* Data Mnager */,
 				159A228E1E6C0F1B004DC61B /* Customise View */,
 				159A22951E6C2664004DC61B /* Utility */,
 				159A22891E6C0E97004DC61B /* View Controller */,
@@ -264,8 +264,6 @@
 				15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */,
 				159A22801E6C0429004DC61B /* CollectionViewCell.h */,
 				159A22811E6C0429004DC61B /* CollectionViewCell.m */,
-				155B918A1E6DED56005CC114 /* CustomizeLabel.h */,
-				155B918B1E6DED56005CC114 /* CustomizeLabel.m */,
 			);
 			name = "Customise View";
 			sourceTree = "<group>";
@@ -310,6 +308,8 @@
 				15669BDD1E6EE7750016EBA4 /* LocationManager.m */,
 				151FCC5B1E70902300CBC71F /* NSString+StringOperations.h */,
 				151FCC5C1E70902300CBC71F /* NSString+StringOperations.m */,
+				156B78E61E713F9200E72B1B /* ComposeURL.h */,
+				156B78E71E713F9200E72B1B /* ComposeURL.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -504,6 +504,7 @@
 				151FCC601E70A6EB00CBC71F /* Collection.m in Sources */,
 				159A22A01E6C2B5F004DC61B /* Category.m in Sources */,
 				1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */,
+				156B78E81E713F9200E72B1B /* ComposeURL.m in Sources */,
 				159A22941E6C245B004DC61B /* Services.m in Sources */,
 				1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */,
 				15669BDA1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m in Sources */,
@@ -513,7 +514,6 @@
 				1541B3DE1E6D8231000C2A44 /* Location.m in Sources */,
 				151FCC641E70AC8600CBC71F /* CacheManager.m in Sources */,
 				1528E1201E6D396700042D16 /* SearchBar.m in Sources */,
-				155B918C1E6DED56005CC114 /* CustomizeLabel.m in Sources */,
 				155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

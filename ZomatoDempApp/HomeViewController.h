@@ -14,8 +14,11 @@
 #import "LocationManager.h"
 #import "AlertDisplay.h"
 #import "DataParser.h"
+#import "Define.h"
 
-
+#define KRESTURANT_COLLECTION_COLLECTION_CELL @"CollectionViewCell"
+#define KRESTURANT_COLLECTION_COLLECTION_CELL_IDENTIFIER @"Cell"
+#define KNUMBER_OF_SECTIONS_IN_COLLECTION_VIEW 1;
 
 @interface HomeViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -24,7 +27,6 @@
 @property (strong,nonatomic) SessionData *session;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
--(IBAction)unwindfromLocationVC:(UIStoryboardSegue *)unwindSegue;
 -(IBAction)unwindfromLocation:(UIStoryboardSegue *)unwindSegue;
 
 @end

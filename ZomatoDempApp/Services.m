@@ -10,30 +10,30 @@
 
 @implementation Services
 
-
+//method makes request to be send to server
 +(void) makeRequest :(NSString *)urlString  withCompletionHandler :(void (^)(NSURLRequest *request))callBackToParser{
     NSURL *url=[NSURL URLWithString:urlString];
+	
     NSLog(@"URL String=%@",url.description);
+	
     NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
-    [urlRequest setHTTPMethod:@"GET"];
-    [urlRequest setValue:KZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
+    [urlRequest setHTTPMethod:K_REQUEST_GET_TYPE]; // request type==GET
+    [urlRequest setValue:KZOMATO_API_KEY forHTTPHeaderField:K_USERKEY_KEY];//sending API KEY with  Authorization Header
     callBackToParser(urlRequest);
 
 }
 
 
+//method sends request to server and recieves data
 + (void) sendRequest:(NSURLRequest *) request completionHandler:(void (^) (NSDictionary *,NSString *))callbackToParser
 {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
 		{
-        NSLog(@" data:%@, response:%@, error:%@", data.description, response.description, error.description);
-		
 		NSString *errorMsg=nil;
         NSDictionary *responseData=nil;
 		NSError *err=nil;
-		
-        if(error!=nil)
+		if(error!=nil)
 		{
             errorMsg=KSERVER_ERROR;//if server erro ,status code==5XX
         }
@@ -44,8 +44,8 @@
 				errorMsg=err.description;//if data is not parsable
 			}
         }
-        dispatch_async(dispatch_get_main_queue(), ^
-			{
+		// working on main thread as the data needs to interact with UI elements
+        dispatch_async(dispatch_get_main_queue(), ^{
             callbackToParser(responseData,errorMsg);
             });
     }];
@@ -53,17 +53,7 @@
 }
 
 
-//+(void) makeRequestWithParametres :(NSString *)urlString withService :(NSString *)service withCompletionHandler:(void (^)(NSURLRequest *request))callBackToParser
-//{
-//	//NSString * urlStr =[urlString stringByReplacingOccurrencesOfString:@"<service>" withString:service];
-//	// urlString=[urlString stringByAppendingString:data];
-//	NSURL *url=[NSURL URLWithString:urlString];
-//	NSLog(@"URL String=%@",url.description);
-//	NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
-//	[urlRequest setHTTPMethod:@"GET"];
-//	[urlRequest setValue:ZOMATO_API_KEY forHTTPHeaderField:@"user-Key"];//sending API KEY with  Authorization Header
-//	callBackToParser(urlRequest);
-//}
+
 
 @end
 

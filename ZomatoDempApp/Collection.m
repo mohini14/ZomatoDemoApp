@@ -15,11 +15,11 @@
     self = [super init];
     if (self && dictionary){
         
-        self.collectionId=[dictionary[KZOMATO_COLLECTIONS_ID]integerValue];
-        self.url=dictionary[KZOMATO_COLLECTIONS_URL];
-        self.dscription=dictionary[KZOMATO_COLLECTIONS_DESCRIPTION];
-        self.imageUrl=dictionary[KZOMATO_COLLECTIONS_IMAGEURL];
-        self.title=dictionary[KZOMATO_COLLECTIONS_TITLE];
+        self.collectionId=[dictionary[KZOMATO_COLLECTION_COLLECTION_ID][KZOMATO_COLLECTIONS_ID]integerValue];
+        self.url=dictionary[KZOMATO_COLLECTION_COLLECTION_ID][KZOMATO_COLLECTIONS_URL];
+        self.dscription=dictionary[KZOMATO_COLLECTION_COLLECTION_ID][KZOMATO_COLLECTIONS_DESCRIPTION];
+        self.imageUrl=dictionary[KZOMATO_COLLECTION_COLLECTION_ID][KZOMATO_COLLECTIONS_IMAGEURL];
+        self.title=dictionary[KZOMATO_COLLECTION_COLLECTION_ID][KZOMATO_COLLECTIONS_TITLE];
         [self getImage:^(UIImage *image) {
             self.collectionImage=image;
         }];

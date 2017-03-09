@@ -10,7 +10,7 @@
 
 @implementation AlertDisplay
 
-
+//method displays an alert with some message
 + (void)showAlertPopupWithTitle:(NSString *)message forView:(UIViewController *)view {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(KAPP_NAME_CONSTANT, nil) message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -20,6 +20,7 @@
 }
 
 
+//method displays an alert with message along with some action to be done after OK is pressed
 +(void)  showAlertPopupWithTitle:(NSString *)message forView :(UIViewController *)view withBlock:(void (^)())callBackTocalledVC{
 	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(KAPP_NAME_CONSTANT, nil) message:message preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(ALERT_TITLE_OK, nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){

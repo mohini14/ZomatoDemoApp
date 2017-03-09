@@ -15,6 +15,12 @@
 #import "LocationManager.h"
 #import "HomeViewController.h"
 #import "SessionData.h"
+#import "StringOperations.h"
+
+#define KSERACH_RESULTS_TABLE_VIEW_CELL_IDENTIFIER @"LocationResults"
+#define KSERACH_RESULT_TABLE_VIEW_CELL_XIB @"SearchedResultsCVCellTableViewCell"
+#define KSERACH_RESULT_TABLE_VIEW_CELL_CLASS @"SearchedResultsCVCellTableViewCell.h"
+#define KUNWIND_SEGUE_TO_HOMEVC_IDENTIFIER @"unwindfromLocation"
 
 @interface LocationViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 

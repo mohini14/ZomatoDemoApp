@@ -10,6 +10,8 @@
 
 @implementation NSString (StringOperations)
 
+
+//method aooends two strings
 -(NSString *) add :(NSObject *)obj
 {
    return  [NSString stringWithFormat:@"%@%@",self,obj];

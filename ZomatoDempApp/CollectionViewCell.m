@@ -15,4 +15,10 @@
     // Initialization code
 }
 
+// method sets up the collection view cell elements
+-(void) setUpCollectionViewCell :(Collection *)collection
+{
+	self.image.image=collection.collectionImage;
+	self.titleLabel.text=collection.title;
+}
 @end

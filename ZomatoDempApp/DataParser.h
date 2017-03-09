@@ -12,11 +12,22 @@
 #import "Category.h"
 #import "CityDetails.h"
 #import "Location.h"
-#import "StringOperations.h"
+#import "SessionData.h"
+#import "Collection.h"
+#import "ComposeURL.h"
+
+#define KZOMATO_CITY_RESOURCE @"cities"
+#define KZOMATO_LOCATION_RESOURCE @"locations"
+#define KZOMATO_COLLECTIONS_RESOURSE @"collections"
+#define  KZOMATO_LOCATION_SUGGESTION_KEY @"location_suggestions"
+#define KZOMATO_LIMIT_FETCHED_RESULTS @10
+
 
 @interface DataParser : NSObject
 
-+(void) getCategories :(void (^)(NSArray *categories,NSString * errorMsg))callBackToMainVC;
+
 +(void) getCityDetails :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC;
 +(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC;
++(void) getCollections:(double)lat withLongitude:(double)lon withCompletionHandler :(void (^) (NSArray *array,NSString *errorMsg))callBackToMainVC;
+
 @end

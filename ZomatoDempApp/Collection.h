@@ -14,6 +14,7 @@
 #define KZOMATO_COLLECTIONS_TITLE @"title"
 #define KZOMATO_COLLECTIONS_DESCRIPTION @"description"
 #define KZOMATO_COLLECTIONS_IMAGEURL @"image_url"
+#define KZOMATO_COLLECTION_COLLECTION_ID @"collection"
 
 
 @interface Collection : NSObject
@@ -26,5 +27,6 @@
 @property NSString *title;
 @property UIImage *collectionImage;
 
+-(instancetype) initWithDictionary:(NSDictionary*)dictionary;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #define KZOMATO_URL_HOST @"https://developers.zomato.com/"
 #define KZOMATO_API @"api/"
 #define KZOMATO_VERSION @"v2.1/"
@@ -20,6 +21,9 @@
 
 #define KSERVER_ERROR @"SERVER ERROR"
 #define KERROR_MSG @"SOMETHING WENT WRONG"
+#define KDATA_FETCHING_ERROR_MESSAGE @"ERROR IN FETCHING DATA"
+
+#define KZERO_INT_CONST 0
 
 @interface Define : NSObject
 

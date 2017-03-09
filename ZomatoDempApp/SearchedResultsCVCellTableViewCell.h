@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchedResultsCVCellTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countryNameLabel;
 

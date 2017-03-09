@@ -11,133 +11,66 @@
 
 @implementation DataParser
 
-//+(void) getCategories :(void (^)(NSArray *categories,NSString * errorMsg))callBackToMainVC
-//{
-//    __block NSURLRequest *request;
-//    
-//    [Services makeRequest:ZOMATO_CATEGORY_FIELD withData:nil withCompletionHandler:^(NSURLRequest *recievedRequest)
-//    {
-//        request=recievedRequest;
-//    }];
-//    [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-//     {
-//		NSMutableArray *categories=[[NSMutableArray alloc]init];
-//		if(errorMsg==nil)
-//		{
-//		 for(NSDictionary *obj in data[@"categories"])
-//             {
-//                 Category *category = [[Category alloc] initWithDictionary:obj];
-//                 [categories addObject:category];
-//			 }
-//		}
-//         callBackToMainVC(categories,errorMsg);
-//    }];
-//}
-
-
-
-//
-//+(NSURL *) composeURLWithParametersForLOCATION :(double)lat withLongitude :(double)lon {
-//		NSURLComponents *components=[NSURLComponents componentsWithString:ZOMATO_URL];
-//        NSString *latitude=[NSString stringWithFormat:@"%.20f", lat];
-//        NSString *longitude=[NSString stringWithFormat:@"%.20f", lon];
-//        NSURLQueryItem *latd=[NSURLQueryItem queryItemWithName:@"lat" value:latitude];
-//        NSURLQueryItem *lond=[NSURLQueryItem queryItemWithName:@"lon" value:longitude];
-//		components.queryItems=@[latd,lond];
-//		NSURL *url=components.URL;
-//		return url;
-//	
-//	
-//}
-
-//+(void)getCurrentLocation:(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC
-//{
-//    __block NSURLRequest *request;
-//    NSNumber *latitude=[NSNumber numberWithDouble:lat];
-//    NSNumber *longitude=[NSNumber numberWithDouble:lon];
-//    
-//    NSDictionary *dict=@{@"lat":[@"" add:latitude],
-//                         @"lon":[@"" add:longitude]
-//                         };
-//    NSString *urlString=[DataParser composeURLString:dict withResource:@"locations"];
-//    
-//    [Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
-//     {
-//         request=recievedRequest;
-//         __block Location *currentLocation;
-//         [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-//          {
-//              // NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
-//              if(errorMsg==nil)
-//              {
-//                  NSArray *array= data[@"location_suggestions"];
-//                  Location *location=[Location alloc]initWithDictionary:array[0]];
-//                  currentLocation=location;
-//              }
-//              
-//              callBackToMainVC(currentLocation,errorMsg);
-//          }];
-//     }];
-//    
-//
-//}
-
-+(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC{
+//method gets current location of user
++(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC
+{
     __block NSURLRequest *request;
-    NSNumber *latitude=[NSNumber numberWithDouble:lat];
-    NSNumber *longitude=[NSNumber numberWithDouble:lon];
-
-    NSDictionary *dict=@{@"lat":[@"" add:latitude],
-                        @"lon":[@"" add:longitude]
-        };
-    NSString *urlString=[DataParser composeURLString:dict withResource:@"cities"];
+	NSNumber *latitude=[NSNumber numberWithDouble:lat];//converting double to an object type
+	NSNumber *longitude=[NSNumber numberWithDouble:lon];//converting double to an object type
 	
-        [Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
+	NSDictionary *dict=@{@"lat":[@"" add:latitude], //initialising a dictionary to make query parameter
+                        @"lon":[@"" add:longitude]};
+	
+	//method gets composed urlString
+    NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_CITY_RESOURCE];
+	
+	//method makes request to server to establish connection
+	[Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
+	{
+		request=recievedRequest;
+		
+		//sending request to server to get data
+		[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
 		 {
-			request=recievedRequest;
-             __block CityDetails *currentCity;
-			[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
-		   {
-			// NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
+			 CityDetails *currentCity;
 			 if(errorMsg==nil)
 			 {
-				 NSArray *array= data[@"location_suggestions"];
-                 CityDetails *city=[[CityDetails alloc]initWithDictionary:array[0]];
-                 currentCity=city;
+				 //converting recieved data to CityDetails model
+				 NSArray *array= data[KZOMATO_LOCATION_SUGGESTION_KEY];
+				 CityDetails *city=[[CityDetails alloc]initWithDictionary:array[0]];
+				 currentCity=city;
 			 }
-               
 			 callBackToMainVC(currentCity,errorMsg);
-		 }];
-		}];
-
-	
-	
+	}];
+	}];
 }
 
 
-
+// method gets the details of a city
 +(void) getCityDetails :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC
 {
 	__block NSURLRequest *request;
-    NSNumber *count = @10;
+    NSNumber *count =KZOMATO_LIMIT_FETCHED_RESULTS ;           //converting an integer to object type
     NSDictionary *dict=@{ @"q"  : citySearch,
-                          @"count":[@"" add:count]
-                          };
-    NSString *urlString=[DataParser composeURLString:dict withResource:@"cities"];
+                          @"count":[@"" add:count]}; //initialising dict to make query parameters
+	//method get composed URL string
+    NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_CITY_RESOURCE];
+	
+	//method makes request to server to establish connection
     [Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
 	 {
 		request=recievedRequest;
+		//sending request to server to get data
 		[Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
 	   {
 		 NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
 		 if(errorMsg==nil)
 		 {
-			 NSArray *array = data[@"location_suggestions"];//location suggestion is an array
-			for(NSDictionary *obj in array)
-			{
+			 NSArray *array = data[KZOMATO_LOCATION_SUGGESTION_KEY];//location suggestion is an array
+			 for(NSDictionary *obj in array)
+			 {
 				CityDetails *cityDetail=[[CityDetails alloc]initWithDictionary:obj];
 				[cityDetails addObject:cityDetail];
-				
 			}
 			 
 		 }
@@ -146,62 +79,49 @@
 	}];
 }
 
+
+//method gets the collections in a city i.e groups of resturant types in a city
 +(void) getCollections:(double)lat withLongitude:(double)lon withCompletionHandler :(void (^) (NSArray *array,NSString *errorMsg))callBackToMainVC
 {
     __block NSURLRequest *request;
     NSNumber *latitude=[NSNumber numberWithDouble:lat];
     NSNumber *longitude=[NSNumber numberWithDouble:lon];
-    NSNumber *count=@10;
-    
+    NSNumber *count=KZOMATO_LIMIT_FETCHED_RESULTS;    //converting an integer to object type
+	SessionData *session=[SessionData getInstance];
+	NSNumber *city_id=session.currentCityDetails.city_id;
     NSDictionary *dict=@{@"lat":[@"" add:latitude],
-                         @"lon":[@"" add:longitude],
-                         @"count":[@"" add:count]
+						 @"lon":[@"" add:longitude],//initialising dict to make query parameters
+						 @"count":[@"" add:count],
+						 @"city_id":[@"" add:city_id]
                          };
-    NSString *urlString=[DataParser composeURLString:dict withResource:@"cities"];
+	
+	//method get composed URL string
+	NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_COLLECTIONS_RESOURSE];
+	//method makes request to server to establish connection
     [Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
      {
          request=recievedRequest;
+		 //sending request to server to get data
          [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
           {
-              NSMutableArray *cityDetails=[[NSMutableArray alloc]init];
+              NSMutableArray *cityCollections=[[NSMutableArray alloc]init];
               if(errorMsg==nil)
               {
-                  NSArray *array = data[@"location_suggestions"];//location suggestion is an array
-                  for(NSDictionary *obj in array)
-                  {
-                      CityDetails *cityDetail=[[CityDetails alloc]initWithDictionary:obj];
-                      [cityDetails addObject:cityDetail];
-                      
-                  }
-                  
+				   NSArray *array = data[KZOMATO_COLLECTIONS_RESOURSE];
+				  for(NSDictionary *obj in array)
+				  {
+					  //converting data to collection model class
+					  Collection *collection=[[Collection alloc]initWithDictionary:obj];
+					  [cityCollections addObject:collection];
+				  }
+					  
               }
-              callBackToMainVC(cityDetails,errorMsg);
+              callBackToMainVC(cityCollections,errorMsg);
           }];
      }];
     
 }
-#pragma mark-Composing URL QUERY PARAMETRS 
-+(NSURL *) composeQueryParameters :(NSDictionary *)dict
-{
-	NSURLComponents *components=[NSURLComponents componentsWithString:@""];
-    NSMutableArray *parameters=[[NSMutableArray alloc]init];
-    for(NSString *key in dict)
-    {
-        [parameters addObject:[NSURLQueryItem queryItemWithName:key value:[dict valueForKey:key]]];
-    }
-    
-    components.queryItems=parameters;
-	NSURL *url=components.URL;
-	return url;
-  
-}
 
-+(NSString *) composeURLString :(NSDictionary *)dict withResource :(NSString *)resource
-{
-    NSURL *urlQueryParameters=[DataParser composeQueryParameters:dict];
-    NSString *urlQueryParameterStr=urlQueryParameters.absoluteString;
-    NSString *urlString=[NSString stringWithFormat:@"%@%@%@%@%@",KZOMATO_URL_HOST,KZOMATO_API,KZOMATO_VERSION,resource,urlQueryParameterStr];
-    return urlString;
-}
+
 
 @end

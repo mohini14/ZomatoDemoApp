@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Collection.h"
 
 @interface CollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UILabel *nameLable;
 
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+-(void) setUpCollectionViewCell :(Collection *)collection;
 
 @end
