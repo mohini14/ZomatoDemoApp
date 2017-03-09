@@ -15,10 +15,10 @@
 	self = [super init];
 	if (self && dictionary){
 		
-		self.iD=dictionary[KZOMATO_RESURANT_ID];
-		self.name=dictionary[KZOMATO_RESTURANT_NAME];
-		self.url=dictionary[KZOMATO_RESTURANT_URL];
-		self.photoURL=dictionary[KZOMATO_RESTURANT_PHOTO_URL];
+		self.iD=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESURANT_ID];
+		self.name=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_NAME];
+		self.url=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_URL];
+		self.photoURL=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_PHOTO_URL];
 		[self getImage:^(UIImage *image) {
 			self.image=image;
 		}];

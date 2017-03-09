@@ -15,6 +15,9 @@
 #define KZOMATO_RESTURANT_NAME @"name"
 #define KZOMATO_RESTURANT_URL @"url"
 #define KZOMATO_RESTURANT_PHOTO_URL @"photos_url"
+#define KZOMATO_RESTURANT_KEY @"restaurant"
+#define KZOMATO_RESTURANT_R_KEY @"R"
+#define KZOMATO_RESTURANT_USER_RATING_KEY @"user_rating"
 
 @interface Resturant : NSObject
 

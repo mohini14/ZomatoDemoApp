@@ -135,7 +135,10 @@
 						 @"lon":[@"" add:longitude],//initialising dict to make query parameters
 						 @"count":[@"" add:count],
 						 @"radius":[@"" add:radius],
-						 @"q" :session.currentCityDetails.name
+						 @"q" :session.currentCityDetails.name,
+                         @"order":@"asc",
+                         @"sort":@"rating",
+                         @"entity_type":@"city"
 						 };
 	//method get composed URL string
 	NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_SEARCH_RESOURSE];

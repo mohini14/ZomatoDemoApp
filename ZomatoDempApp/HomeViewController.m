@@ -75,7 +75,7 @@
 					  session.currentCityDetails=city;
 					  self.selectLocationButton.title=city.name;
 					  [self setUpCollectionView];
-					  [self setUpResturantCollectionView];
+                      [self setUpResturantCollectionView];
 				  }
 			  }];
 			 
@@ -104,8 +104,9 @@
 	[DataParser getCollections:session.lat withLongitude:session.lon withCompletionHandler:^(NSArray *array, NSString *errorMsg) {
 		if(errorMsg==nil)
 		{
-			resturants=array;
-			[self.allResturantsCollectionView reloadData];
+			collections=array;
+			[self.collectionView reloadData];
+            
 		}
 		else
 		{
@@ -169,14 +170,14 @@
 	{
     CollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:KRESTURANT_COLLECTION_COLLECTION_CELL_IDENTIFIER forIndexPath:indexPath];
 	Collection *collection=collections[indexPath.row];
-	[cell setUpCollectionViewCell:collection];
+	[cell setUpCollectionViewCell:collection]; //method sets up the object of the cell
 	return cell;
 	}
 	else
 	{
 	 ResturantCollectionCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:KRESTURANT_cOLLECTION_CELL_IDENTIFIER forIndexPath:indexPath];
 	Resturant *resturant=resturants[indexPath.row];
-	[cell setUpCollectionViewCell:resturant];
+	[cell setUpCollectionViewCell:resturant];   //method sets up the object of the cell
 	return cell;
 	}
 	
@@ -202,6 +203,8 @@
 	 self.session=[SessionData getInstance];
 	if([unwindSegue.identifier isEqualToString:@"unwindfromLocation"]){
 		self.selectLocationButton.title=self.session.currentSelectedLocationButtonTitle;
+        [self populateDataInCollectionView];
+        [self populateDataInResturantCollectionView];
 	}
 	
 	
