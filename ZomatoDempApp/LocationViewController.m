@@ -122,6 +122,8 @@
 					  SessionData *session=[SessionData getInstance];
 					  session.currentSelectedLocationButtonTitle=city.name;
 					  session.currentCityDetails=city;
+                      session.lat=lat;
+                      session.lon=lon;
 					  [self performSegueWithIdentifier:@"unwindfromLocation" sender:self];
 					  //[self.navigationController popViewControllerAnimated:YES];
 				  }];
@@ -145,6 +147,8 @@
 		SessionData *session=[SessionData getInstance];
 		session.currentSelectedLocationButtonTitle=city.name;
 		session.currentCityDetails=city;
+        session.lat=lat;
+        session.lon=lon;
 		[self performSegueWithIdentifier:@"unwindfromLocation" sender:self];
 	}];
 }

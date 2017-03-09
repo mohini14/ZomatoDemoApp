@@ -6,38 +6,44 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="CollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="157" height="94"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="157" height="94"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-ex-WqR">
-                        <rect key="frame" x="0.0" y="0.0" width="157" height="94"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-6I-izp">
+                        <rect key="frame" x="8" y="8" width="134" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="m1T-BN-hxF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8c-L5-FKh">
+                        <rect key="frame" x="8" y="78.5" width="134" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.39553304659999999" blue="0.1901022808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="oEJ-ex-WqR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UPw-zG-o4x"/>
-                <constraint firstItem="oEJ-ex-WqR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wn1-al-Mag"/>
-                <constraint firstAttribute="trailing" secondItem="oEJ-ex-WqR" secondAttribute="trailing" id="kZJ-5D-khR"/>
-                <constraint firstAttribute="bottom" secondItem="oEJ-ex-WqR" secondAttribute="bottom" id="v86-qv-0bi"/>
+                <constraint firstItem="d8c-L5-FKh" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="A5C-ms-Ml5"/>
+                <constraint firstItem="ukH-6I-izp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="PT1-e8-993"/>
+                <constraint firstItem="ukH-6I-izp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="ZIL-3W-cRl"/>
+                <constraint firstAttribute="trailingMargin" secondItem="d8c-L5-FKh" secondAttribute="trailing" id="hcG-tc-QCG"/>
+                <constraint firstAttribute="trailingMargin" secondItem="ukH-6I-izp" secondAttribute="trailing" id="jbc-vu-Z4c"/>
+                <constraint firstItem="d8c-L5-FKh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="tDG-vL-RJD"/>
             </constraints>
             <size key="customSize" width="157" height="94"/>
-            <connections>
-                <outlet property="nameLable" destination="oEJ-ex-WqR" id="MuE-pa-aDa"/>
-            </connections>
-            <point key="canvasLocation" x="47.5" y="76"/>
+            <point key="canvasLocation" x="-89.5" y="92"/>
         </collectionViewCell>
     </objects>
 </document>

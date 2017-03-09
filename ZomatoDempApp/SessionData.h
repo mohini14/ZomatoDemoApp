@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CityDetails.h"
 
 @interface SessionData : NSObject
 
-@property (strong,nonatomic) NSArray *currentCityDetails;
+@property (strong,nonatomic) CityDetails *currentCityDetails;
 @property (strong,nonatomic) NSString *currentSelectedLocationButtonTitle;
+@property  double lat;
+@property double lon;
 
 
 +(instancetype)getInstance;
