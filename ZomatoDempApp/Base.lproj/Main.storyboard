@@ -127,12 +127,43 @@
                                                 <color key="textColor" red="0.67207739639999997" green="0.67207739639999997" blue="0.67207739639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL RESTURANTS..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E91-Kb-egE">
+                                                <rect key="frame" x="16" y="323" width="200" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="T8B-e6-1no"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Y3s-f6-tLn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" white="0.49348028273809519" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-f3-xl1">
+                                                <rect key="frame" x="0.0" y="347" width="375" height="453"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aw9-bD-Hu3">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zk1-6K-UCs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2301432513697583" green="0.91314055347791989" blue="0.93304727979274615" alpha="0.085469850352112672" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Dko-ZV-Fhe" firstAttribute="top" secondItem="aC7-lg-ohs" secondAttribute="top" id="23B-Hp-hY8"/>
                                             <constraint firstItem="Pbw-Ik-BqP" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" constant="16" id="4bZ-ZT-qWL"/>
                                             <constraint firstAttribute="trailing" secondItem="Pbw-Ik-BqP" secondAttribute="trailing" constant="16" id="5Xw-n2-7Js"/>
+                                            <constraint firstAttribute="bottom" secondItem="3pN-f3-xl1" secondAttribute="bottom" id="8Qq-ni-6e2"/>
                                             <constraint firstAttribute="trailing" secondItem="efp-uB-zLu" secondAttribute="trailing" constant="16" id="A9q-zp-gjz"/>
                                             <constraint firstAttribute="trailing" secondItem="Cen-Lm-0cp" secondAttribute="trailing" constant="16" id="Aak-hj-tfj"/>
                                             <constraint firstItem="ezP-2g-Fgh" firstAttribute="top" secondItem="aC7-lg-ohs" secondAttribute="top" constant="174" id="Ibe-vv-a81"/>
@@ -140,6 +171,9 @@
                                             <constraint firstItem="Pbw-Ik-BqP" firstAttribute="top" secondItem="aC7-lg-ohs" secondAttribute="top" constant="30" id="Mnk-eK-2dr"/>
                                             <constraint firstItem="Dko-ZV-Fhe" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" id="NlB-VI-Qpg"/>
                                             <constraint firstAttribute="bottom" secondItem="Dko-ZV-Fhe" secondAttribute="bottom" id="RZJ-Hw-InM"/>
+                                            <constraint firstItem="3pN-f3-xl1" firstAttribute="top" secondItem="E91-Kb-egE" secondAttribute="bottom" constant="4" id="S8e-Hc-qds"/>
+                                            <constraint firstAttribute="trailing" secondItem="3pN-f3-xl1" secondAttribute="trailing" id="TJi-Cp-TAX"/>
+                                            <constraint firstItem="E91-Kb-egE" firstAttribute="top" secondItem="HJs-Kh-8sX" secondAttribute="bottom" constant="5" id="TWY-3c-VPU"/>
                                             <constraint firstItem="ezP-2g-Fgh" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" constant="16" id="WR1-13-KUU"/>
                                             <constraint firstItem="efp-uB-zLu" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" constant="16" id="XGO-Y2-Zm9"/>
                                             <constraint firstItem="HJs-Kh-8sX" firstAttribute="top" secondItem="ezP-2g-Fgh" secondAttribute="bottom" constant="4" id="gXq-dn-Zbe"/>
@@ -147,7 +181,9 @@
                                             <constraint firstItem="HJs-Kh-8sX" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" id="kVF-dn-gq8"/>
                                             <constraint firstItem="efp-uB-zLu" firstAttribute="top" secondItem="Pbw-Ik-BqP" secondAttribute="bottom" constant="10" id="nIj-xw-o1i"/>
                                             <constraint firstItem="Cen-Lm-0cp" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" constant="16" id="ot9-n7-mBZ"/>
+                                            <constraint firstItem="3pN-f3-xl1" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" id="pbd-td-EDK"/>
                                             <constraint firstAttribute="trailing" secondItem="Dko-ZV-Fhe" secondAttribute="trailing" id="xlC-Oi-Lpt"/>
+                                            <constraint firstItem="E91-Kb-egE" firstAttribute="leading" secondItem="aC7-lg-ohs" secondAttribute="leading" constant="16" id="zWF-Ex-Hq8"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
@@ -190,6 +226,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="allResturantsCollectionView" destination="3pN-f3-xl1" id="lM6-Eb-Jb9"/>
                         <outlet property="collectionView" destination="HJs-Kh-8sX" id="umX-LX-Exb"/>
                         <outlet property="selectLocationButton" destination="1Cg-6R-24E" id="3LT-Wm-7gI"/>
                     </connections>

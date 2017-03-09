@@ -11,7 +11,6 @@
 		151FCC5D1E70902300CBC71F /* NSString+StringOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC5C1E70902300CBC71F /* NSString+StringOperations.m */; };
 		151FCC601E70A6EB00CBC71F /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC5F1E70A6EB00CBC71F /* Collection.m */; };
 		151FCC641E70AC8600CBC71F /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC631E70AC8600CBC71F /* CacheManager.m */; };
-		1528E1201E6D396700042D16 /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1528E11F1E6D396700042D16 /* SearchBar.m */; };
 		1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D11E6D5402000C2A44 /* CityDetails.m */; };
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
@@ -21,6 +20,9 @@
 		15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */; };
 		15669BDE1E6EE7750016EBA4 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15669BDD1E6EE7750016EBA4 /* LocationManager.m */; };
 		156B78E81E713F9200E72B1B /* ComposeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 156B78E71E713F9200E72B1B /* ComposeURL.m */; };
+		156B78EB1E715D8700E72B1B /* Resturant.m in Sources */ = {isa = PBXBuildFile; fileRef = 156B78EA1E715D8700E72B1B /* Resturant.m */; };
+		156B78EF1E71620600E72B1B /* ResturantCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156B78ED1E71620600E72B1B /* ResturantCollectionCell.m */; };
+		156B78F01E71620600E72B1B /* ResturantCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156B78EE1E71620600E72B1B /* ResturantCollectionCell.xib */; };
 		1578989E1E6F24030002D60F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1578989D1E6F24030002D60F /* CoreLocation.framework */; };
 		15789C061E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15789C031E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png */; };
 		15789C091E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 15789C081E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png */; };
@@ -56,8 +58,6 @@
 		151FCC5F1E70A6EB00CBC71F /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		151FCC621E70AC8600CBC71F /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		151FCC631E70AC8600CBC71F /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
-		1528E11E1E6D396700042D16 /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
-		1528E11F1E6D396700042D16 /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
 		1541B3D01E6D5402000C2A44 /* CityDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetails.h; sourceTree = "<group>"; };
 		1541B3D11E6D5402000C2A44 /* CityDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetails.m; sourceTree = "<group>"; };
 		1541B3D41E6D71F0000C2A44 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
@@ -75,6 +75,11 @@
 		15669BDD1E6EE7750016EBA4 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		156B78E61E713F9200E72B1B /* ComposeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeURL.h; sourceTree = "<group>"; };
 		156B78E71E713F9200E72B1B /* ComposeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeURL.m; sourceTree = "<group>"; };
+		156B78E91E715D8700E72B1B /* Resturant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resturant.h; sourceTree = "<group>"; };
+		156B78EA1E715D8700E72B1B /* Resturant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resturant.m; sourceTree = "<group>"; };
+		156B78EC1E71620600E72B1B /* ResturantCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResturantCollectionCell.h; sourceTree = "<group>"; };
+		156B78ED1E71620600E72B1B /* ResturantCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResturantCollectionCell.m; sourceTree = "<group>"; };
+		156B78EE1E71620600E72B1B /* ResturantCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResturantCollectionCell.xib; sourceTree = "<group>"; };
 		1578989D1E6F24030002D60F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		15789C031E6F282E0002D60F /* Screen Shot 2017-02-28 at 1.12.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-02-28 at 1.12.22 PM.png"; sourceTree = "<group>"; };
 		15789C081E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-02-28 at 1.12.45 PM.png"; sourceTree = "<group>"; };
@@ -258,12 +263,12 @@
 		159A228E1E6C0F1B004DC61B /* Customise View */ = {
 			isa = PBXGroup;
 			children = (
-				1528E11E1E6D396700042D16 /* SearchBar.h */,
-				1528E11F1E6D396700042D16 /* SearchBar.m */,
 				15669BD71E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.h */,
 				15669BD81E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m */,
 				159A22801E6C0429004DC61B /* CollectionViewCell.h */,
 				159A22811E6C0429004DC61B /* CollectionViewCell.m */,
+				156B78EC1E71620600E72B1B /* ResturantCollectionCell.h */,
+				156B78ED1E71620600E72B1B /* ResturantCollectionCell.m */,
 			);
 			name = "Customise View";
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				15669BD91E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib */,
+				156B78EE1E71620600E72B1B /* ResturantCollectionCell.xib */,
 				159A22821E6C0429004DC61B /* CollectionViewCell.xib */,
 			);
 			name = "XIB Files";
@@ -334,6 +340,8 @@
 				1541B3DD1E6D8231000C2A44 /* Location.m */,
 				151FCC5E1E70A6EB00CBC71F /* Collection.h */,
 				151FCC5F1E70A6EB00CBC71F /* Collection.m */,
+				156B78E91E715D8700E72B1B /* Resturant.h */,
+				156B78EA1E715D8700E72B1B /* Resturant.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -475,6 +483,7 @@
 				159A226B1E6C01FF004DC61B /* LaunchScreen.storyboard in Resources */,
 				159A22681E6C01FF004DC61B /* Assets.xcassets in Resources */,
 				159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */,
+				156B78F01E71620600E72B1B /* ResturantCollectionCell.xib in Resources */,
 				15789C091E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */,
 				159A22661E6C01FF004DC61B /* Main.storyboard in Resources */,
 				15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */,
@@ -500,9 +509,11 @@
 				159A229C1E6C2A23004DC61B /* DataParser.m in Sources */,
 				151FCC5D1E70902300CBC71F /* NSString+StringOperations.m in Sources */,
 				159A22A31E6C3C35004DC61B /* AlertDisplay.m in Sources */,
+				156B78EB1E715D8700E72B1B /* Resturant.m in Sources */,
 				159A22601E6C01FF004DC61B /* AppDelegate.m in Sources */,
 				151FCC601E70A6EB00CBC71F /* Collection.m in Sources */,
 				159A22A01E6C2B5F004DC61B /* Category.m in Sources */,
+				156B78EF1E71620600E72B1B /* ResturantCollectionCell.m in Sources */,
 				1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */,
 				156B78E81E713F9200E72B1B /* ComposeURL.m in Sources */,
 				159A22941E6C245B004DC61B /* Services.m in Sources */,
@@ -513,7 +524,6 @@
 				15669BD41E6EC0380016EBA4 /* LocationViewController.m in Sources */,
 				1541B3DE1E6D8231000C2A44 /* Location.m in Sources */,
 				151FCC641E70AC8600CBC71F /* CacheManager.m in Sources */,
-				1528E1201E6D396700042D16 /* SearchBar.m in Sources */,
 				155B91871E6DBF8C005CC114 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

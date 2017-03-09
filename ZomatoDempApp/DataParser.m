@@ -122,6 +122,45 @@
     
 }
 
+//method gets all the resturants in the given city on the basis of city name,lat,lon
++(void) getAllResturants :(void (^) (NSArray *array,NSString *errorMsg))callBackToMAinVC
+{
+	__block NSURLRequest *request;
+	SessionData *session=[SessionData getInstance];
+	NSNumber *latitude=[NSNumber numberWithDouble:session.lat];
+	NSNumber *longitude=[NSNumber numberWithDouble:session.lon];
+	NSNumber *count=KZOMATO_LIMIT_FETCHED_RESULTS;   //converting an integer to object type
+	NSNumber *radius=KZOMATO_FIXED_RADIUS;
+	NSDictionary *dict=@{@"lat":[@"" add:latitude],
+						 @"lon":[@"" add:longitude],//initialising dict to make query parameters
+						 @"count":[@"" add:count],
+						 @"radius":[@"" add:radius],
+						 @"q" :session.currentCityDetails.name
+						 };
+	//method get composed URL string
+	NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_SEARCH_RESOURSE];
+	//method makes request to server to establish connection
+	[Services makeRequest:urlString withCompletionHandler:^(NSURLRequest *recievedRequest)
+	 {
+		 request=recievedRequest;
+		 //sending request to server to get data
+		 [Services sendRequest:request completionHandler:^(NSDictionary *data, NSString *errorMsg)
+		  {
+			  NSMutableArray *resturants=[[NSMutableArray alloc]init];
+			  if(errorMsg==nil)
+			  {
+				  NSArray *array = data[KZOMATO_RESTURANTS_KEY];
+				  for(NSDictionary *obj in array)
+				  {
+					  Resturant *resturant=[[Resturant alloc]initWithDictionary:obj];
+					  [resturants addObject:resturant];
+				  }
+				  
+			  }
+			  callBackToMAinVC(resturants,errorMsg);
+		  }];
+	 }];
 
+}
 
 @end

@@ -15,10 +15,12 @@
 #import "AlertDisplay.h"
 #import "DataParser.h"
 #import "Define.h"
+#import "ResturantCollectionCell.h"
 
 #define KRESTURANT_COLLECTION_COLLECTION_CELL @"CollectionViewCell"
 #define KRESTURANT_COLLECTION_COLLECTION_CELL_IDENTIFIER @"Cell"
-#define KNUMBER_OF_SECTIONS_IN_COLLECTION_VIEW 1;
+#define KRESTURANT_cOLLECTION_CELL_IDENTIFIER @"ResturantCell"
+#define KRESTURANT_COLLECTION_CELL @"ResturantCollectionCell"
 
 @interface HomeViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -26,6 +28,7 @@
 @property (strong,nonatomic) NSString *selectLocationButtonTitle;
 @property (strong,nonatomic) SessionData *session;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *allResturantsCollectionView;
 
 -(IBAction)unwindfromLocation:(UIStoryboardSegue *)unwindSegue;
 

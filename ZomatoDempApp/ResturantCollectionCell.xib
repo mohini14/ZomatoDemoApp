@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResturantCell" id="gTV-IL-0wX" customClass="ResturantCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5np-8n-Fgq">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="Hws-Gh-xG7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n3-aE-ehZ">
+                        <rect key="frame" x="0.0" y="70" width="150" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5n3-aE-ehZ" secondAttribute="bottom" id="Xep-gj-nvJ"/>
+                <constraint firstItem="5np-8n-Fgq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d0C-oo-a84"/>
+                <constraint firstAttribute="trailing" secondItem="5n3-aE-ehZ" secondAttribute="trailing" id="fWq-dt-acl"/>
+                <constraint firstItem="5n3-aE-ehZ" firstAttribute="top" secondItem="5np-8n-Fgq" secondAttribute="bottom" id="hgd-eV-ZDB"/>
+                <constraint firstItem="5n3-aE-ehZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iQ5-b2-gXT"/>
+                <constraint firstAttribute="trailing" secondItem="5np-8n-Fgq" secondAttribute="trailing" id="jIV-Yh-bNP"/>
+                <constraint firstItem="5np-8n-Fgq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="um9-LJ-Ttu"/>
+            </constraints>
+            <connections>
+                <outlet property="resturantImage" destination="5np-8n-Fgq" id="7aC-Pl-tXc"/>
+                <outlet property="resturantTitle" destination="5n3-aE-ehZ" id="pmd-uA-hgU"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
