@@ -19,6 +19,8 @@
 		self.name=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_NAME];
 		self.url=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_URL];
 		self.photoURL=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_PHOTO_URL];
+		self.image = nil;
+		self.imageLoaded = FALSE;
 		[self getImage:^(UIImage *image) {
 			self.image=image;
 		}];
@@ -33,6 +35,7 @@
 -(void) getImage :(void (^)(UIImage * image))callBack{
 	
 	[[CacheManager getInstance]imageForURL:self.photoURL withCompletionHandler:^(UIImage *image) {
+		self.imageLoaded = TRUE;
 		callBack(image);
 	}];
 	

@@ -137,8 +137,15 @@
 		{
 			resturants=array;
 			[self.allResturantsCollectionView reloadData];
-			[NSTimer scheduledTimerWithTimeInterval:10.0 repeats:NO block:^(NSTimer *timer){
-				[self.allResturantsCollectionView reloadData];
+			[NSTimer scheduledTimerWithTimeInterval:2.0 repeats:YES block:^(NSTimer *timer){
+				BOOL allImagesLoaded = YES;
+                [self.allResturantsCollectionView reloadData];
+				for(Resturant *res in resturants) {
+					if (res.imageLoaded == FALSE)
+						allImagesLoaded = NO;
+				}
+				if(allImagesLoaded)
+					[timer invalidate];
 			}];
 		}
 		else

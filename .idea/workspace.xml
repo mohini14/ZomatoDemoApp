@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e7dee3e-3c36-45b6-b3e8-19a9f5b13f5a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp/DataParser.h" afterPath="$PROJECT_DIR$/ZomatoDempApp/DataParser.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp/DataParser.m" afterPath="$PROJECT_DIR$/ZomatoDempApp/DataParser.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp.xcodeproj/project.xcworkspace/xcuserdata/ansal.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ZomatoDempApp.xcodeproj/project.xcworkspace/xcuserdata/ansal.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp.xcodeproj/xcuserdata/ansal.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/ZomatoDempApp.xcodeproj/xcuserdata/ansal.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m" afterPath="$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp/Resturant.h" afterPath="$PROJECT_DIR$/ZomatoDempApp/Resturant.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZomatoDempApp/Resturant.m" afterPath="$PROJECT_DIR$/ZomatoDempApp/Resturant.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataParser.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataParser.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ZomatoDempApp/DataParser.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
@@ -53,8 +55,8 @@
       <file leaf-file-name="Resturant.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+            <state relative-caret-position="330">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -64,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#137#170#0" expanded="true" />
               </folding>
@@ -92,26 +94,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeViewController.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-593">
-              <caret line="139" column="54" lean-forward="false" selection-start-line="139" selection-start-column="54" selection-end-line="139" selection-end-column="54" />
+            <state relative-caret-position="412">
+              <caret line="139" column="92" lean-forward="true" selection-start-line="139" selection-start-column="92" selection-end-line="139" selection-end-column="92" />
               <folding>
                 <element signature="e#939#2193#0" expanded="false" />
                 <element signature="e#2196#2607#0" expanded="false" />
                 <element signature="e#2609#3093#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Category.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,8 +130,9 @@
         <option value="$PROJECT_DIR$/ZomatoDempApp/ViewController.m" />
         <option value="$PROJECT_DIR$/ZomatoDempApp/DataParser.h" />
         <option value="$PROJECT_DIR$/ZomatoDempApp/Resturant.h" />
-        <option value="$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m" />
         <option value="$PROJECT_DIR$/ZomatoDempApp/DataParser.m" />
+        <option value="$PROJECT_DIR$/ZomatoDempApp/Resturant.m" />
+        <option value="$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m" />
       </list>
     </option>
   </component>
@@ -439,19 +432,19 @@
       <option name="presentableId" value="Default" />
       <updated>1488719541587</updated>
       <workItem from="1488719542915" duration="812000" />
-      <workItem from="1489087303023" duration="2186000" />
+      <workItem from="1489087303023" duration="3140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2998000" />
+    <option name="totallyTimeSpent" value="3952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1366" height="821" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -537,24 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#137#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ZomatoDempApp/DataParser.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -571,23 +546,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-593">
-          <caret line="139" column="54" lean-forward="false" selection-start-line="139" selection-start-column="54" selection-end-line="139" selection-end-column="54" />
-          <folding>
-            <element signature="e#939#2193#0" expanded="false" />
-            <element signature="e#2196#2607#0" expanded="false" />
-            <element signature="e#2609#3093#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ZomatoDempApp/DataParser.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/CacheManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#137#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/Resturant.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZomatoDempApp/HomeViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="139" column="92" lean-forward="true" selection-start-line="139" selection-start-column="92" selection-end-line="139" selection-end-column="92" />
+          <folding>
+            <element signature="e#939#2193#0" expanded="false" />
+            <element signature="e#2196#2607#0" expanded="false" />
+            <element signature="e#2609#3093#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

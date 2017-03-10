@@ -27,6 +27,8 @@
 @property NSString *photoURL;
 @property UIImage *image;
 
--(instancetype) initWithDictionary:(NSDictionary*)dictionary;
+@property(nonatomic) BOOL imageLoaded;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
 @end
