@@ -52,7 +52,6 @@
 -(void) setNavigationBarItems
 {
 	self.selectLocationButton.title=NSLocalizedString(KYOUR_LOCATION_BUTTON_TITLE, nil);
-	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 }
 
 //method displays the current location on navigation bar item as soon as Home page opens
@@ -68,10 +67,7 @@
 			 session.lon=longitude;
 			 session.lat=latitude;
 			 
-			 //using weak self to avoid strong  retain cycle in block for self object
-			 ////////__weak HomeViewController *weakSelf = self;
-
-			 //method gets the current location name on the basis of lat and longitude provided
+			
 			 [DataParser getLocation:latitude withLongitude:longitude withCompletionHandler:^(CityDetails *city, NSString *errorMsg)
 			  {
 				  if(errorMsg==nil)

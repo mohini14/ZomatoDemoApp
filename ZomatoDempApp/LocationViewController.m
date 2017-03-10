@@ -49,7 +49,6 @@
 
 -(void) setUpInitialVCElements
 {
-	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 	[[self.detectMyLocationButton layer] setBorderWidth:2.0f];
 	[[self.detectMyLocationButton layer] setBorderColor:[UIColor greenColor].CGColor];
 
@@ -67,6 +66,7 @@
 	else
 	return recentlysearhedCities.count;
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -97,9 +97,12 @@
 	
 	
 }
+
+
 -(double)tableView : (UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 	return KTABLE_ROW_HIEGHT;
 }
+
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -109,6 +112,7 @@
 	[self onClickToMainVC];
 	
 }
+
 
 #pragma mark- loading Table views
 

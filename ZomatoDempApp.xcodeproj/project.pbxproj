@@ -12,6 +12,7 @@
 		151FCC601E70A6EB00CBC71F /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC5F1E70A6EB00CBC71F /* Collection.m */; };
 		151FCC641E70AC8600CBC71F /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC631E70AC8600CBC71F /* CacheManager.m */; };
 		152F74291E72786F00AD7E7E /* ResturantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152F74281E72786F00AD7E7E /* ResturantViewController.m */; };
+		152F74311E72CA1800AD7E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 152F74331E72CA1800AD7E7E /* Localizable.strings */; };
 		1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D11E6D5402000C2A44 /* CityDetails.m */; };
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
@@ -61,6 +62,9 @@
 		151FCC631E70AC8600CBC71F /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		152F74271E72786F00AD7E7E /* ResturantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResturantViewController.h; sourceTree = "<group>"; };
 		152F74281E72786F00AD7E7E /* ResturantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResturantViewController.m; sourceTree = "<group>"; };
+		152F74321E72CA1800AD7E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		152F74341E72CA3700AD7E7E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		152F74351E72CA3D00AD7E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1541B3D01E6D5402000C2A44 /* CityDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetails.h; sourceTree = "<group>"; };
 		1541B3D11E6D5402000C2A44 /* CityDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetails.m; sourceTree = "<group>"; };
 		1541B3D41E6D71F0000C2A44 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				159A226C1E6C01FF004DC61B /* Info.plist */,
+				152F74331E72CA1800AD7E7E /* Localizable.strings */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				159A22681E6C01FF004DC61B /* Assets.xcassets in Resources */,
 				159A22841E6C0429004DC61B /* CollectionViewCell.xib in Resources */,
 				156B78F01E71620600E72B1B /* ResturantCollectionCell.xib in Resources */,
+				152F74311E72CA1800AD7E7E /* Localizable.strings in Resources */,
 				15789C091E6F28940002D60F /* Screen Shot 2017-02-28 at 1.12.45 PM.png in Resources */,
 				159A22661E6C01FF004DC61B /* Main.storyboard in Resources */,
 				15669BDB1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.xib in Resources */,
@@ -553,6 +559,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		152F74331E72CA1800AD7E7E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				152F74321E72CA1800AD7E7E /* Base */,
+				152F74341E72CA3700AD7E7E /* de */,
+				152F74351E72CA3D00AD7E7E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		159A22641E6C01FF004DC61B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

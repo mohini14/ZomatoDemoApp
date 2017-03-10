@@ -10,7 +10,9 @@
 #import "SessionData.h"
 
 @interface ResturantViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *ResturantImage;
+
 @property (weak, nonatomic) IBOutlet UILabel *restRating;
 @property (weak, nonatomic) IBOutlet UILabel *restName;
 @property (weak, nonatomic) IBOutlet UILabel *restAdress;
