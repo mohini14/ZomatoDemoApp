@@ -134,7 +134,7 @@
 	NSMutableDictionary *dict= [[NSMutableDictionary alloc] init];
 	dict[@"count"] = [@"" add:count];
 	dict[@"q"] = session.currentCityDetails.name;
-	dict[@"order"] = @"asc";
+	dict[@"order"] = @"des";
 	dict[@"sort"] = @"rating";
 	dict[@"entity_type"] = @"city";
 

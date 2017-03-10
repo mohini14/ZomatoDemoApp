@@ -19,6 +19,7 @@
 #define KZOMATO_RESTURANT_R_KEY @"R"
 #define KZOMATO_RESTURANT_USER_RATING_KEY @"user_rating"
 
+
 @interface Resturant : NSObject
 
 @property NSNumber *iD;
@@ -26,7 +27,7 @@
 @property NSString *url;
 @property NSString *photoURL;
 @property UIImage *image;
-
+@property NSNumber *rating;
 @property(nonatomic) BOOL imageLoaded;
 
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;

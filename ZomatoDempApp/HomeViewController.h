@@ -16,11 +16,15 @@
 #import "DataParser.h"
 #import "Define.h"
 #import "ResturantCollectionCell.h"
+#import "Resturant.h"
 
 #define KRESTURANT_COLLECTION_COLLECTION_CELL @"CollectionViewCell"
 #define KRESTURANT_COLLECTION_COLLECTION_CELL_IDENTIFIER @"Cell"
 #define KRESTURANT_cOLLECTION_CELL_IDENTIFIER @"ResturantCell"
 #define KRESTURANT_COLLECTION_CELL @"ResturantCollectionCell"
+
+#define KUNWIND_SEGUE_IDENTIFIER_FRM_LOCATION @"unwindfromLocation"
+#define KUNWIND_SEGUE_IDENTIFIER_FRM_RESTURANT @"HomeToResturant"
 
 @interface HomeViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -29,6 +33,7 @@
 @property (strong,nonatomic) SessionData *session;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *allResturantsCollectionView;
+
 
 -(IBAction)unwindfromLocation:(UIStoryboardSegue *)unwindSegue;
 

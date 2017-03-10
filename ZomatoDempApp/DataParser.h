@@ -23,8 +23,8 @@
 #define KZOMATO_COLLECTIONS_RESOURSE @"collections"
 #define  KZOMATO_LOCATION_SUGGESTION_KEY @"location_suggestions"
 #define KZOMATO_RESTURANTS_KEY @"restaurants"
-#define KZOMATO_LIMIT_FETCHED_RESULTS @10
-#define KZOMATO_FIXED_RADIUS @5000
+#define KZOMATO_LIMIT_FETCHED_RESULTS @20
+#define KZOMATO_FIXED_RADIUS @12000
 
 
 @interface DataParser : NSObject

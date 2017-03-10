@@ -19,6 +19,7 @@
 		self.name=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_NAME];
 		self.url=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_URL];
 		self.photoURL=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_PHOTO_URL];
+		self.rating=dictionary[KZOMATO_RESTURANT_KEY][@"user_rating"][@"aggregate_rating"];
 		self.image = nil;
 		self.imageLoaded = FALSE;
 		[self getImage:^(UIImage *image) {

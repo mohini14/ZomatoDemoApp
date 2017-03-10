@@ -30,21 +30,36 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-zk-Dn2">
+                        <rect key="frame" x="120" y="0.0" width="30" height="20"/>
+                        <color key="backgroundColor" red="0.80195803684207012" green="0.84477732901645797" blue="0.16730109183266936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="r6f-AC-V6O"/>
+                            <constraint firstAttribute="width" constant="30" id="vlE-qj-GiK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Uz-zk-Dn2" secondAttribute="trailing" id="2ee-Me-e5W"/>
                 <constraint firstAttribute="bottom" secondItem="5n3-aE-ehZ" secondAttribute="bottom" id="Xep-gj-nvJ"/>
                 <constraint firstItem="5np-8n-Fgq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d0C-oo-a84"/>
                 <constraint firstAttribute="trailing" secondItem="5n3-aE-ehZ" secondAttribute="trailing" id="fWq-dt-acl"/>
                 <constraint firstItem="5n3-aE-ehZ" firstAttribute="top" secondItem="5np-8n-Fgq" secondAttribute="bottom" id="hgd-eV-ZDB"/>
                 <constraint firstItem="5n3-aE-ehZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iQ5-b2-gXT"/>
+                <constraint firstItem="4Uz-zk-Dn2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iaX-VR-Du8"/>
                 <constraint firstAttribute="trailing" secondItem="5np-8n-Fgq" secondAttribute="trailing" id="jIV-Yh-bNP"/>
                 <constraint firstItem="5np-8n-Fgq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="um9-LJ-Ttu"/>
             </constraints>
             <connections>
-                <outlet property="resturantImage" destination="5np-8n-Fgq" id="7aC-Pl-tXc"/>
-                <outlet property="resturantTitle" destination="5n3-aE-ehZ" id="pmd-uA-hgU"/>
+                <outlet property="resturantImage" destination="5np-8n-Fgq" id="vM7-Cj-HtY"/>
+                <outlet property="resturantRating" destination="4Uz-zk-Dn2" id="mRX-PE-ZAm"/>
+                <outlet property="resturantTitle" destination="5n3-aE-ehZ" id="VmS-p1-mQu"/>
             </connections>
+            <point key="canvasLocation" x="-97" y="38"/>
         </collectionViewCell>
     </objects>
 </document>

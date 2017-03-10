@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *resturantImage;
 @property (weak, nonatomic) IBOutlet UILabel *resturantTitle;
+@property (weak, nonatomic) IBOutlet UILabel *resturantRating;
 
 -(void) setUpCollectionViewCell :(Resturant *)resturant;
 

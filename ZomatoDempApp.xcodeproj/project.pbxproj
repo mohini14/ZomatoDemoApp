@@ -11,6 +11,7 @@
 		151FCC5D1E70902300CBC71F /* NSString+StringOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC5C1E70902300CBC71F /* NSString+StringOperations.m */; };
 		151FCC601E70A6EB00CBC71F /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC5F1E70A6EB00CBC71F /* Collection.m */; };
 		151FCC641E70AC8600CBC71F /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 151FCC631E70AC8600CBC71F /* CacheManager.m */; };
+		152F74291E72786F00AD7E7E /* ResturantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152F74281E72786F00AD7E7E /* ResturantViewController.m */; };
 		1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D11E6D5402000C2A44 /* CityDetails.m */; };
 		1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3D51E6D71F0000C2A44 /* SessionData.m */; };
 		1541B3DE1E6D8231000C2A44 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541B3DD1E6D8231000C2A44 /* Location.m */; };
@@ -58,6 +59,8 @@
 		151FCC5F1E70A6EB00CBC71F /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
 		151FCC621E70AC8600CBC71F /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		151FCC631E70AC8600CBC71F /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
+		152F74271E72786F00AD7E7E /* ResturantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResturantViewController.h; sourceTree = "<group>"; };
+		152F74281E72786F00AD7E7E /* ResturantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResturantViewController.m; sourceTree = "<group>"; };
 		1541B3D01E6D5402000C2A44 /* CityDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetails.h; sourceTree = "<group>"; };
 		1541B3D11E6D5402000C2A44 /* CityDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetails.m; sourceTree = "<group>"; };
 		1541B3D41E6D71F0000C2A44 /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				155B91861E6DBF8C005CC114 /* HomeViewController.m */,
 				15669BD21E6EC0380016EBA4 /* LocationViewController.h */,
 				15669BD31E6EC0380016EBA4 /* LocationViewController.m */,
+				152F74271E72786F00AD7E7E /* ResturantViewController.h */,
+				152F74281E72786F00AD7E7E /* ResturantViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 				1541B3D21E6D5402000C2A44 /* CityDetails.m in Sources */,
 				156B78E81E713F9200E72B1B /* ComposeURL.m in Sources */,
 				159A22941E6C245B004DC61B /* Services.m in Sources */,
+				152F74291E72786F00AD7E7E /* ResturantViewController.m in Sources */,
 				1541B3D61E6D71F0000C2A44 /* SessionData.m in Sources */,
 				15669BDA1E6EC6DD0016EBA4 /* SearchedResultsCVCellTableViewCell.m in Sources */,
 				159A22831E6C0429004DC61B /* CollectionViewCell.m in Sources */,

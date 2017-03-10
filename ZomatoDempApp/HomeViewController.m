@@ -9,6 +9,10 @@
 #import "HomeViewController.h"
 #define KYOUR_LOCATION_BUTTON_TITLE @ "YOUR LOCATION"
 #define KNUMBER_OF_SECTIONS_IN_COLLECTION_VIEW 1
+#define KCOLLECTION_COLLECTIONVIEW_WIDTH 150
+#define KCOLLECTION_COLLECTIONVIEW_HIEGHT 100
+#define KRESTURANT_COLLECTIONVIEW_WIDTH 190
+#define KRESTURANT_COLLECTIONVIEW_HIEGHT 120
 
 
 @interface HomeViewController ()
@@ -18,6 +22,7 @@
 @implementation HomeViewController
 {
 	NSArray *collections;
+	NSInteger clickedRow;
 	NSArray *resturants;
     double lat;
     double lon;
@@ -137,6 +142,7 @@
 		{
 			resturants=array;
 			[self.allResturantsCollectionView reloadData];
+			//using NSTimer to see if all images are loaded or not
 			[NSTimer scheduledTimerWithTimeInterval:2.0 repeats:YES block:^(NSTimer *timer){
 				BOOL allImagesLoaded = YES;
                 [self.allResturantsCollectionView reloadData];
@@ -194,24 +200,39 @@
     
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	clickedRow=indexPath.row;
+	SessionData *session=[SessionData getInstance];
+	session.resturant=resturants[clickedRow];
+	[self performSegueWithIdentifier:KUNWIND_SEGUE_IDENTIFIER_FRM_RESTURANT sender:self];
+}
+
 
 #pragma mark- Collection View Cell Layout methods
 -(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(150,100);
+	if(collectionView==self.collectionView)
+	{
+		return CGSizeMake(KCOLLECTION_COLLECTIONVIEW_WIDTH,KCOLLECTION_COLLECTIONVIEW_HIEGHT);
+	}
+	else
+	{
+		return CGSizeMake(KRESTURANT_COLLECTIONVIEW_WIDTH, KRESTURANT_COLLECTIONVIEW_HIEGHT);
+	}
 }
 
 -(UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    return UIEdgeInsetsMake(KZERO_INT_CONST, KZERO_INT_CONST, KZERO_INT_CONST, KZERO_INT_CONST);
 }
 
 
 
 #pragma mark-UNWIND SEGUE
 //segue to come back from location VC
--(IBAction)unwindfromLocation:(UIStoryboardSegue *)unwindSegue
+-(IBAction) unwindfromLocation:(UIStoryboardSegue *)unwindSegue
 {
 	 self.session=[SessionData getInstance];
-	if([unwindSegue.identifier isEqualToString:@"unwindfromLocation"]){
+	if([unwindSegue.identifier isEqualToString:KUNWIND_SEGUE_IDENTIFIER_FRM_LOCATION]){
 		self.selectLocationButton.title=self.session.currentSelectedLocationButtonTitle;
         [self populateDataInCollectionView];
         [self populateDataInResturantCollectionView];
