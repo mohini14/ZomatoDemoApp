@@ -86,12 +86,12 @@
     __block NSURLRequest *request;
     NSNumber *latitude=[NSNumber numberWithDouble:lat];
     NSNumber *longitude=[NSNumber numberWithDouble:lon];
-    NSNumber *count=KZOMATO_LIMIT_FETCHED_RESULTS;    //converting an integer to object type
+//    NSNumber *count=KZOMATO_LIMIT_FETCHED_RESULTS;    //converting an integer to object type
 	SessionData *session=[SessionData getInstance];
 	NSNumber *city_id=session.currentCityDetails.city_id;
     NSDictionary *dict=@{@"lat":[@"" add:latitude],
 						 @"lon":[@"" add:longitude],//initialising dict to make query parameters
-						 @"count":[@"" add:count],
+//						 @"count":[@"" add:count],
 						 @"city_id":[@"" add:city_id]
                          };
 	
@@ -131,15 +131,21 @@
 	NSNumber *longitude=[NSNumber numberWithDouble:session.lon];
 	NSNumber *count=KZOMATO_LIMIT_FETCHED_RESULTS;   //converting an integer to object type
 	NSNumber *radius=KZOMATO_FIXED_RADIUS;
-	NSDictionary *dict=@{@"lat":[@"" add:latitude],
-						 @"lon":[@"" add:longitude],//initialising dict to make query parameters
-						 @"count":[@"" add:count],
-						 @"radius":[@"" add:radius],
-						 @"q" :session.currentCityDetails.name,
-                         @"order":@"asc",
-                         @"sort":@"rating",
-                         @"entity_type":@"city"
-						 };
+	NSMutableDictionary *dict= [[NSMutableDictionary alloc] init];
+	dict[@"count"] = [@"" add:count];
+	dict[@"q"] = session.currentCityDetails.name;
+	dict[@"order"] = @"asc";
+	dict[@"sort"] = @"rating";
+	dict[@"entity_type"] = @"city";
+
+	if(session.lat!=0 && session.lon!=0)
+	{
+		dict[@"lat"] = [@"" add:latitude];
+		dict[@"lon"] = [@"" add:longitude];
+		dict[@"radius"] = [@"" add:radius];
+
+	}
+
 	//method get composed URL string
 	NSString *urlString=[ComposeURL composeURLString:dict withResource:KZOMATO_SEARCH_RESOURSE];
 	//method makes request to server to establish connection

@@ -137,6 +137,9 @@
 		{
 			resturants=array;
 			[self.allResturantsCollectionView reloadData];
+			[NSTimer scheduledTimerWithTimeInterval:10.0 repeats:NO block:^(NSTimer *timer){
+				[self.allResturantsCollectionView reloadData];
+			}];
 		}
 		else
 		{
