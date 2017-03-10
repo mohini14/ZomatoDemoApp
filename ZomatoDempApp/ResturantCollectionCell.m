@@ -21,6 +21,6 @@
 {
 	self.resturantImage.image=resturant.image;
 	self.resturantTitle.text=resturant.name;
-	self.resturantRating.text=resturant.rating;
+	self.resturantRating.text=[NSString stringWithFormat:@"%@",resturant.rating];
 }
 @end

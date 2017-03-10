@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 -(void) setUpCollectionViewCell :(Collection *)collection;
 
 @end

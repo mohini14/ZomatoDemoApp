@@ -20,6 +20,7 @@
 	double lat;
 	double lon;
 	NSInteger clickedRow;
+	NSMutableArray *recentlysearhedCities;
 }
 
 - (void)viewDidLoad {
@@ -33,17 +34,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) viewDidAppear:(BOOL)animated
+{
+	[self populateRecentlySerachedTableView];
+}
+
 #pragma  mark -Set Up Initial VC
 -(void) setUpVC
 {
-	self.searchedResultsTable.delegate=self;
-	self.searchedResultsTable.dataSource=self;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
-	[[self.detectMyLocationButton layer] setBorderWidth:2.0f];
-	[[self.detectMyLocationButton layer] setBorderColor:[UIColor greenColor].CGColor];
+	[self setUpInitialVCElements]; //sets up initial VC elements
+	[self setUpSerchedResultsTableView]; //sets up serached results ta
+	[self SetUpRecentlySearchedTableView]; //sets up recently serached table view
 }
 
+-(void) setUpInitialVCElements
+{
+	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+	[[self.detectMyLocationButton layer] setBorderWidth:2.0f];
+	[[self.detectMyLocationButton layer] setBorderColor:[UIColor greenColor].CGColor];
 
+}
 #pragma mark-Table View Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -52,7 +62,10 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+	if(tableView==self.searchedResultsTable)
 	return cities.count;
+	else
+	return recentlysearhedCities.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,10 +75,23 @@
 	{
 		cell=[[[NSBundle mainBundle]loadNibNamed:KSERACH_RESULT_TABLE_VIEW_CELL_XIB owner:KSERACH_RESULT_TABLE_VIEW_CELL_CLASS options:nil]firstObject];
 	}
-	if(cities.count >0){
-	CityDetails *city=cities[indexPath.row];
-	cell.cityNameLabel.text=city.name;
-	cell.countryNameLabel.text=city.country_name;
+	CityDetails *city;
+	if(tableView==self.searchedResultsTable)
+	{
+		if(cities.count > KZERO_INT_CONST)
+		{
+			city=cities[indexPath.row];
+			[cell setUpCellAttributes:city];
+		}
+	}
+	else
+	{
+		if(recentlysearhedCities.count > KZERO_INT_CONST)
+		{
+			city=recentlysearhedCities[indexPath.row];
+			[cell setUpCellAttributes:city];
+
+		}
 	}
 	return cell;
 	
@@ -78,14 +104,41 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	clickedRow=indexPath.row;
+
 	//method passes the controll to main VC as soon as table view cell is clicked
 	[self onClickToMainVC];
 	
 }
 
+#pragma mark- loading Table views
+
+-(void) setUpSerchedResultsTableView
+{
+	self.searchedResultsTable.delegate=self;
+	self.searchedResultsTable.dataSource=self;
+	
+}
 
 
+-(void) SetUpRecentlySearchedTableView
+{
+	self.recentlySearchedPlacesTable.delegate=self;
+	self.recentlySearchedPlacesTable.dataSource=self;
+	[self populateRecentlySerachedTableView];
+}
 
+
+-(void) populateRecentlySerachedTableView
+{
+	SessionData *session=[SessionData getInstance];
+	if(session.recentlySearchedItems.count > KZERO_INT_CONST)
+	{
+		self.recentlySerachedtableViewHieght.constant=[recentlysearhedCities count]*KTABLE_ROW_HIEGHT;
+		recentlysearhedCities=session.recentlySearchedItems;
+		[self.recentlySearchedPlacesTable reloadData];
+	}
+	
+}
 #pragma mark- ACTIONS ON VC
 //method fetches the name of cities on the basis of searched string and dispalys in table view
 - (IBAction)searchButton:(id)sender
@@ -99,13 +152,12 @@
 		 {
 			 if(errorMsg==nil)
 			 {
-				 NSInteger tableHieght=[cityDetails count ]*60;
+				 NSInteger tableHieght=[cityDetails count ]*KTABLE_ROW_HIEGHT;
 				 self.searchedResultsTableHieght.constant=tableHieght;
 				 self.locationSearchBar.text=nil;
-				 
-				 //updating local array cities with data fetched from the server
+				//updating local array cities with data fetched from the server
 				 cities=cityDetails;
-				 
+
 				 //reloading table view as soon as data is fetched
 				 [self.searchedResultsTable reloadData];
 			 }
@@ -141,6 +193,7 @@
 					  session.currentCityDetails=city;
                       session.lat=lat;
                       session.lon=lon;
+					  [session.recentlySearchedItems addObject:session.currentCityDetails];
 					  [weakSelf performSegueWithIdentifier:KUNWIND_SEGUE_TO_HOMEVC_IDENTIFIER sender:weakSelf];
 				  }];
 				}];
@@ -167,6 +220,7 @@
 		session.currentCityDetails=city;
         session.lat=lat;
         session.lon=lon;
+		[session.recentlySearchedItems addObject:session.currentCityDetails];
 		//as soon as ok is clicked the control passes to home VC and displays current location
 		[weakSelf performSegueWithIdentifier:KUNWIND_SEGUE_TO_HOMEVC_IDENTIFIER sender:weakSelf];
 	}];

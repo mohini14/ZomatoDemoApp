@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+// method sets up cell attributes
+-(void) setUpCellAttributes : (CityDetails *)city
+{
+	self.cityNameLabel.text=city.name;
+	self.countryNameLabel.text=city.country_name;
+}
+
 @end

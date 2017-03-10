@@ -29,7 +29,6 @@
 
 @interface DataParser : NSObject
 
-
 +(void) getCityDetails :(NSString *)citySearch withCompletionHandler :(void (^) (NSArray * cityDetails ,NSString * errorMsg))callBackToMainVC;
 +(void) getLocation :(double)lat withLongitude :(double)lon withCompletionHandler :(void (^)(CityDetails *city,NSString *errorMsg))callBackToMainVC;
 +(void) getCollections:(double)lat withLongitude:(double)lon withCompletionHandler :(void (^) (NSArray *array,NSString *errorMsg))callBackToMainVC;

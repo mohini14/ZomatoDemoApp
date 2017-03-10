@@ -19,7 +19,9 @@
 		self.name=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_NAME];
 		self.url=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_URL];
 		self.photoURL=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_PHOTO_URL];
-		self.rating=dictionary[KZOMATO_RESTURANT_KEY][@"user_rating"][@"aggregate_rating"];
+		self.rating=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_RESTURANT_USER_RATING_KEY][KZOMATO_AGGREGATE_RATTING];
+		self.adress=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_LOCATION_KEY][KZOMATO_ADRESS_KEY];
+		self.averageCostForTwo=dictionary[KZOMATO_RESTURANT_KEY][KZOMATO_AVERAGE_COST_KEY];
 		self.image = nil;
 		self.imageLoaded = FALSE;
 		[self getImage:^(UIImage *image) {

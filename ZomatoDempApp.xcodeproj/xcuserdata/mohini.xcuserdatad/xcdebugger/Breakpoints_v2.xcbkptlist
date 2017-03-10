@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZomatoDempApp/DataParser.m"
-            timestampString = "510744109.266448"
+            filePath = "ZomatoDempApp/LocationViewController.m"
+            timestampString = "510830947.489216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "+getCityDetails:withCompletionHandler:"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,14 +73,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZomatoDempApp/DataParser.m"
-            timestampString = "510744704.683905"
+            filePath = "ZomatoDempApp/LocationViewController.m"
+            timestampString = "510830928.401737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "+getCollections:withLongitude:withCompletionHandler:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZomatoDempApp/LocationViewController.m"
+            timestampString = "510830995.032689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-populateRecentlySerachedTableView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZomatoDempApp/LocationViewController.m"
+            timestampString = "510830995.688713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-populateRecentlySerachedTableView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZomatoDempApp/LocationViewController.m"
+            timestampString = "510831455.094933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-detectMyLocationButtonPressed:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__56-[LocationViewController detectMyLocationButtonPressed:]_block_invoke_2"
+                  moduleName = "ZomatoDempApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohini/Desktop/codebase/ZomatoDemoApp/ZomatoDempApp/LocationViewController.m"
+                  timestampString = "510833954.133726"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__56-[LocationViewController detectMyLocationButtonPressed:]_block_invoke_3"
+                  moduleName = "ZomatoDempApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohini/Desktop/codebase/ZomatoDemoApp/ZomatoDempApp/LocationViewController.m"
+                  timestampString = "510833954.137236"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

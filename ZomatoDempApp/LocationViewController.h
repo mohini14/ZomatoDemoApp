@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *recentlySearchedPlacesTable;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchedResultsTableHieght;
 @property (strong,nonatomic) HomeViewController *homeVCObj;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *recentlySerachedtableViewHieght;
 
 
 - (IBAction)searchButton:(id)sender;

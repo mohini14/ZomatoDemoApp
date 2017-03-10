@@ -200,6 +200,7 @@
     
 }
 
+//delegate method called when a row is clicked
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	clickedRow=indexPath.row;
@@ -238,6 +239,11 @@
         [self populateDataInResturantCollectionView];
 	}
 	
+	
+}
+
+-(IBAction)unwindFromResturant:(UIStoryboardSegue *)unwindSegue
+{
 	
 }
 

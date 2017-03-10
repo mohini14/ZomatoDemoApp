@@ -30,23 +30,20 @@
 {
 	[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 	[self setLabel]; //method sets up Resturant Name Label
-	[self setWebView]; //method loads the content of the resturant with URL
 	
-
 }
 
 -(void) setLabel
 {
 	SessionData *session=[SessionData getInstance];
-	self.resturantName.text=session.resturant.name;
+	self.restName.text=session.resturant.name;
+	self.ResturantImage.image=session.resturant.image;
+	self.restRating.text=[NSString stringWithFormat:@"%@",session.resturant.rating];
+	self.restAdress.text=session.resturant.adress;
+	self.avrgCostForTwo.text=[NSString stringWithFormat:@"%@%@",@"average cost for two : ",session.resturant.averageCostForTwo];
+	
 }
--(void) setWebView
-{
-	SessionData *session=[SessionData getInstance];
-	NSString *urlString = session.resturant.url;
-	NSURL *url = [NSURL URLWithString:urlString];
-	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-	[self.resturantWebView loadRequest:urlRequest];
-}
+
+
 
 @end

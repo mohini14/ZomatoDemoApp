@@ -17,6 +17,7 @@
 @property (strong,nonatomic) NSString *currentSelectedLocationButtonTitle;
 @property (strong,nonatomic) Collection *collection;
 @property (strong,nonatomic) Resturant *resturant;
+@property (strong,nonatomic) NSMutableArray *recentlySearchedItems;
 @property  double lat;
 @property double lon;
 

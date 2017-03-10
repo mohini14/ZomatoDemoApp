@@ -19,7 +19,6 @@
 
 @interface Collection : NSObject
 
-
 @property NSInteger collectionId;
 @property NSString *url;
 @property NSString *dscription;
