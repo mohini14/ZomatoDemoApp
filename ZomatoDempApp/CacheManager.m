@@ -25,14 +25,14 @@
 
 
 //Check if the image is present in Cache Manager or not
--(void) imageForURL :(NSString *)imageURL withCompletionHandler:(void (^) (UIImage *))CallBackToMainVC{
+-(void) imageForURL :(NSString *)imageURL withCompletionHandler:(void (^) (UIImage *))callBackToMainVC{
     CacheManager *imgCached=[CacheManager getInstance];
     UIImage *img=[imgCached loadImageForURL:imageURL];
     if(img){
-        CallBackToMainVC(img);
+        callBackToMainVC(img);
     }else{
         [imgCached downloadImageForURL:imageURL withCompletionHandler :^(UIImage *imageDownloaded){
-            CallBackToMainVC(imageDownloaded);
+            callBackToMainVC(imageDownloaded);
         }];
     }
 }
