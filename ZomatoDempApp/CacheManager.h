@@ -10,11 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "Define.h"
 #import "AlertDisplay.h"
+
 @interface CacheManager : NSObject
 
-+(instancetype) getInstance;
-
--(void) imageForURL :(NSString *)imageURL withCompletionHandler:(void (^) (UIImage *))CallBackToMainVC;
-
+-(void) imageForURL :(NSString *)imageURL withCompletionHandler:(void (^) (UIImage *))callBackToMainVC;
 
 @end
