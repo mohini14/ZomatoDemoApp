@@ -9,7 +9,7 @@
 #import "Category.h"
 
 @implementation Category
-
+//Model file for category 
 -(instancetype) initWithDictionary:(NSDictionary*)dictionary
 {
     self = [super init];
