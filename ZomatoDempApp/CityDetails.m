@@ -8,6 +8,7 @@
 
 #import "CityDetails.h"
 
+//Model for city details
 @implementation CityDetails
 -(instancetype) initWithDictionary:(NSDictionary*)dictionary
 {
