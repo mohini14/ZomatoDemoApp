@@ -77,7 +77,10 @@
 // Retreving image from cache manager for given "PATH" in Documnet Directory for given "NAME"
 -(UIImage *)loadImageForURL :(NSString *)imgURL
 {
-    UIImage *image=[UIImage imageWithContentsOfFile:[self retrievePathForNameInDocumentDirectory :[imgURL lastPathComponent]]];//loading image if already present
+    UIImage *image = new Image();
+    if(imgURL){
+        UIImage *image=[UIImage imageWithContentsOfFile:[self retrievePathForNameInDocumentDirectory :[imgURL lastPathComponent]]];//loading image if already present
+    }
     return image;
 }
 
